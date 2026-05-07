@@ -138,6 +138,48 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .card-counter{text-align:center;margin-top:16px;font-size:.85rem;color:var(--grau-light);font-family:'Inter',sans-serif}
 .card-counter strong{color:var(--rot)}
 
+/* ============== SECTION 5.5: BLITZ QUIZ ============== */
+.quiz-layout{display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:20px}
+.quiz-card{width:100%;max-width:480px;padding:36px 32px;background:var(--papier-warm);border-radius:var(--radius-lg);border:2px solid var(--linie);text-align:center;transition:all .3s var(--ease)}
+.quiz-card .quiz-infinitive{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;font-weight:700;color:var(--schwarz);margin-bottom:8px}
+.quiz-card .quiz-hint{font-size:.8rem;color:var(--grau-light);margin-bottom:16px;font-family:'Inter',sans-serif}
+.quiz-card .quiz-input-row{display:flex;gap:10px;justify-content:center;align-items:center}
+.quiz-input{width:200px;padding:12px 16px;border:2px solid var(--linie);border-radius:var(--radius);font-family:'EB Garamond',Georgia,serif;font-size:1.3rem;text-align:center;background:var(--weiß);transition:all .3s;min-height:48px}
+.quiz-input:focus{outline:none;border-color:var(--rot);box-shadow:0 0 0 3px rgba(193,18,31,.08)}
+.quiz-input.correct{border-color:#2d6a4f;background:#d8f3dc;animation:pop .3s var(--ease-bounce)}
+.quiz-input.wrong{border-color:var(--rot);background:#ffdddd;animation:shake .4s}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+.quiz-feedback{font-size:.9rem;min-height:24px;margin-top:8px;font-weight:500;font-family:'Inter',sans-serif}
+.quiz-feedback.correct{color:#2d6a4f}
+.quiz-feedback.wrong{color:var(--rot)}
+.quiz-stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.quiz-stat{padding:12px 20px;background:var(--weiß);border-radius:var(--radius);border:1px solid var(--linie-fein);text-align:center;min-width:80px}
+.quiz-stat .stat-num{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--rot)}
+.quiz-stat .stat-label{font-size:.72rem;color:var(--grau-light);text-transform:uppercase;letter-spacing:1px;font-family:'Inter',sans-serif}
+.quiz-progress-bar{width:100%;max-width:480px;height:6px;background:var(--linie-fein);border-radius:3px;overflow:hidden}
+.quiz-progress-fill{height:100%;background:linear-gradient(90deg,var(--rot),var(--gold));border-radius:3px;transition:width .4s var(--ease);width:0}
+.quiz-skip-btn{background:transparent;color:var(--grau-light);border:1px solid var(--linie);padding:8px 20px;border-radius:20px;cursor:pointer;font-size:.82rem;font-family:'Inter',sans-serif;transition:all .25s}
+.quiz-skip-btn:hover{border-color:var(--rot);color:var(--rot)}
+.quiz-done{display:none;text-align:center;padding:24px;animation:slideIn .5s var(--ease)}
+.quiz-done.show{display:block}
+.quiz-done .quiz-done-icon{font-size:3rem;margin-bottom:12px}
+.quiz-done .quiz-done-score{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:var(--rot);margin:8px 0}
+
+/* ============== SECTION 5.6: NACHBARN ============== */
+.group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px}
+.group-card{background:var(--papier-warm);border-radius:var(--radius-lg);border:1px solid var(--linie);overflow:hidden;cursor:pointer;transition:all .3s var(--ease)}
+.group-card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.group-card-header{padding:18px 20px;display:flex;align-items:center;gap:14px}
+.group-card-color{width:10px;height:36px;border-radius:5px;flex-shrink:0}
+.group-card-title{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:700}
+.group-card-count{font-size:.78rem;color:var(--grau-light);font-family:'Inter',sans-serif;margin-left:auto}
+.group-card-body{display:none;padding:0 20px 18px}
+.group-card.open .group-card-body{display:block;animation:slideIn .4s var(--ease)}
+.group-card-body .group-verb-row{display:flex;align-items:center;gap:10px;padding:8px 12px;margin:2px 0;background:var(--weiß);border-radius:var(--radius);font-family:'EB Garamond',Georgia,serif;font-size:.95rem}
+.group-verb-row .gv-inf{font-weight:600;min-width:90px;color:var(--schwarz)}
+.group-verb-row .gv-arrow{color:var(--grau-light)}
+.group-verb-row .gv-past{color:var(--rot);font-weight:600;font-family:'Playfair Display',Georgia,serif}
+
 /* ============== SECTION 6: WRITING ============== */
 .model-toggle{margin:16px 0}
 .model-text{padding:20px 24px;background:linear-gradient(135deg,var(--gold-light),#fff8e6);border-radius:var(--radius-lg);display:none;font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;line-height:1.8;border-left:3px solid var(--gold)}
@@ -178,8 +220,6 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .key-hint{position:fixed;bottom:24px;left:24px;font-size:.75rem;color:var(--grau-light);z-index:998;opacity:.6;font-family:'Inter',sans-serif}
 
 /* ============== RESPONSIVE ============== */
-
-/* --- Mobile First (< 480px): iPhone, 安卓手机 --- */
 @media(max-width:479px){
   html{font-size:15px}
   .section{min-height:100vh;min-height:100dvh;padding:calc(var(--safe-top) + 8px) 12px calc(var(--safe-bottom) + 16px)}
@@ -212,6 +252,15 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   .flip-card-front .card-inf{font-size:.9rem}
   .flip-card-back{font-size:1.1rem}
   .card-counter{font-size:.78rem}
+  .quiz-card{padding:24px 18px}
+  .quiz-card .quiz-infinitive{font-size:1.8rem}
+  .quiz-input{width:160px;font-size:1.1rem;padding:10px 12px}
+  .quiz-stats{gap:12px}
+  .quiz-stat{padding:10px 14px;min-width:60px}
+  .quiz-stat .stat-num{font-size:1.3rem}
+  .group-grid{grid-template-columns:1fr;gap:10px}
+  .group-card-header{padding:14px}
+  .group-card-title{font-size:.95rem}
   .model-text{font-size:.9rem;padding:14px 16px}
   .writing-area textarea{min-height:130px;font-size:.9rem;padding:14px}
   .verb-tracker .vtag{font-size:.75rem;padding:4px 10px}
@@ -229,8 +278,6 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   #progress-dots .dot{width:7px;height:7px}
   #progress-bar{height:2px}
 }
-
-/* --- Large Phones (480-767px): iPhone Pro Max, 华为旗舰 --- */
 @media(min-width:480px) and (max-width:767px){
   html{font-size:15.5px}
   .section{min-height:100dvh;padding:calc(var(--safe-top) + 16px) 16px calc(var(--safe-bottom) + 24px)}
@@ -242,29 +289,26 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   .vs-badge{margin:6px auto}
   .cards-grid{grid-template-columns:repeat(4,1fr);gap:10px}
   .flip-card{height:120px}
+  .group-grid{grid-template-columns:1fr;gap:12px}
   .ticket-grid{grid-template-columns:1fr;gap:16px}
   .key-hint{display:none}
   .bauhaus-circle,.bauhaus-rect,.bauhaus-line{display:none}
 }
-
-/* --- Tablets (768-1023px): iPad, 华为平板, 安卓平板 --- */
 @media(min-width:768px) and (max-width:1023px){
   .section{padding:50px 24px}
   .section-inner{padding:44px 36px}
   .cards-grid{grid-template-columns:repeat(5,1fr);gap:12px}
   .flip-card{height:130px}
+  .group-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .ticket-grid{gap:20px}
   #s1 .headline{font-size:3.2rem}
   .key-hint{bottom:18px;left:18px;font-size:.7rem}
 }
-
-/* --- Desktop (1024-1439px) --- */
 @media(min-width:1024px) and (max-width:1439px){
   .section-inner{max-width:880px;padding:52px 48px}
   .cards-grid{grid-template-columns:repeat(5,1fr)}
+  .group-grid{grid-template-columns:repeat(3,1fr)}
 }
-
-/* --- Large Screens / Projection (1440px+) 投屏大屏 --- */
 @media(min-width:1440px){
   html{font-size:18px}
   .section{min-height:100vh;justify-content:center;padding:60px 40px}
@@ -289,6 +333,9 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   .flip-card-front .card-icon{font-size:1.8rem}
   .flip-card-front .card-inf{font-size:1.25rem}
   .flip-card-back{font-size:1.5rem}
+  .quiz-card .quiz-infinitive{font-size:2.8rem}
+  .quiz-input{width:240px;font-size:1.5rem}
+  .group-grid{grid-template-columns:repeat(4,1fr);gap:18px}
   .writing-area textarea{min-height:200px;font-size:1.15rem;padding:22px}
   .model-text{padding:24px 28px;font-size:1.1rem}
   .ticket-card{padding:32px}
@@ -298,21 +345,15 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   #s8 .final-sub{font-size:1.3rem}
   #s8 .mini-card{font-size:.9rem;padding:7px 18px}
 }
-
-/* --- Touch optimization (all mobile) --- */
 @media(hover:none) and (pointer:coarse){
-  .flip-card,.contrast-card,.trap-card,.verb-row .prät{cursor:default}
+  .flip-card,.contrast-card,.trap-card,.verb-row .prät,.group-card{cursor:default}
   .nav-btn:active{transform:scale(.97)}
 }
-
-/* --- Print / Export --- */
 @media print{
   .section{display:block!important;min-height:auto;page-break-after:always;padding:20px 0}
   #progress-bar,#progress-dots,.key-hint,.nav-row,.toast{display:none!important}
   .section-inner{box-shadow:none;border:1px solid #ccc}
 }
-
-/* Sections visibility */
 .section{display:none}
 .section.active{display:flex}
 </style>
@@ -439,21 +480,77 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   <div class="section-inner">
     <div class="section-tag gold">04 · Notfallkarten</div>
     <h2>🩹 Notfall-Karten</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词不需要背几百个。15 张急救卡，讲故事够用了。<br><span class="zh">点击卡片翻转，看看你认识几个。</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词不需要背几百个。30 张急救卡，讲故事够用了。<br><span class="zh">点击卡片翻转，看看你认识几个。</span></p>
     <div class="cards-grid" id="cardsGrid"></div>
-    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipCount">0</strong>/15 &nbsp;|&nbsp; <span class="zh">全部翻开看看，哪些你认识？</span></p>
+    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipCount">0</strong>/30 &nbsp;|&nbsp; <span class="zh">全部翻开看看，哪些你认识？</span></p>
     <div class="nav-row">
       <button class="nav-btn prev" onclick="goTo(3)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(5)">Schreiben! →</button>
+      <button class="nav-btn" onclick="goTo(5)">⚡ Blitz-Quiz →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== S5.5: BLITZ QUIZ ========== -->
+<section class="section" id="s5b" data-index="5">
+  <div class="bauhaus-circle" style="width:180px;height:180px;bottom:-60px;left:-60px;background:var(--rot)"></div>
+  <div class="section-inner">
+    <div class="section-tag red">05 · Blitz-Quiz</div>
+    <h2>⚡ Blitz-Quiz: 30 Verben</h2>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">看到原形，输入过去时。答对计分，不会就跳过。<br><span class="zh">每题限时不计时，但要快！按 Enter 确认答案。</span></p>
+    <div id="quizActive">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+      <div class="quiz-layout">
+        <div class="quiz-stats">
+          <div class="quiz-stat"><div class="stat-num" id="quizScore">0</div><div class="stat-label">richtig</div></div>
+          <div class="quiz-stat"><div class="stat-num" id="quizStreak">0</div><div class="stat-label">Streak 🔥</div></div>
+          <div class="quiz-stat"><div class="stat-num" id="quizRemain">30</div><div class="stat-label">übrig</div></div>
+        </div>
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-infinitive" id="quizVerb">—</div>
+          <div class="quiz-hint"><span class="zh">输入 Präteritum 过去时</span></div>
+          <div class="quiz-input-row">
+            <input type="text" class="quiz-input" id="quizInput" placeholder="…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="nav-btn" onclick="checkQuiz()" style="padding:10px 20px;font-size:.85rem;min-width:44px">✓</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+        <button class="quiz-skip-btn" onclick="skipQuiz()">überspringen →</button>
+      </div>
+    </div>
+    <div class="quiz-done" id="quizDone">
+      <div class="quiz-done-icon">🏆</div>
+      <p style="font-size:1.1rem;margin-bottom:4px"><span class="zh">测验完成！</span></p>
+      <div class="quiz-done-score"><span id="quizFinalScore">0</span> / 30</div>
+      <p style="color:var(--grau-light);font-size:.9rem"><span class="zh">最高连击：</span><strong style="color:var(--gold)" id="quizMaxStreak">0</strong> 🔥</p>
+      <button class="nav-btn outline" onclick="restartQuiz()" style="margin-top:16px">🔄 <span class="zh">再来一轮</span></button>
+    </div>
+    <div class="nav-row">
+      <button class="nav-btn prev" onclick="goTo(4)">← Zurück</button>
+      <button class="nav-btn" onclick="goTo(6)">Nachbarn finden →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== S5.6: NACHBARN ========== -->
+<section class="section" id="s5c" data-index="6">
+  <div class="bauhaus-rect" style="width:100px;height:260px;top:40px;right:-20px;background:var(--gold);transform:rotate(8deg);opacity:.05"></div>
+  <div class="section-inner">
+    <div class="section-tag gold">06 · Nachbarn</div>
+    <h2>🔍 Nachbarn finden</h2>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词按元音变化模式分组。找邻居，一起记！<br><span class="zh">点击每组展开，看看哪些动词是"一家人"。</span></p>
+    <div class="group-grid" id="groupGrid"></div>
+    <div class="nav-row">
+      <button class="nav-btn prev" onclick="goTo(5)">← Zurück</button>
+      <button class="nav-btn" onclick="goTo(7)">Schreiben! →</button>
     </div>
   </div>
 </section>
 
 <!-- ========== S6: WRITING ========== -->
-<section class="section" id="s6" data-index="5">
+<section class="section" id="s6" data-index="7">
   <div class="bauhaus-circle" style="width:200px;height:200px;top:-50px;left:-60px;background:var(--gold)"></div>
   <div class="section-inner">
-    <div class="section-tag dark">05 · Werkstatt</div>
+    <div class="section-tag dark">07 · Werkstatt</div>
     <h2>Ein Tag im Leben eines Reporters</h2>
     <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">歌德："Es ist nicht genug zu wissen, man muss auch anwenden."<br><span class="zh">——知道还不够，得用起来。用急救卡里的动词，写一段"记者的某一天"。</span></p>
     <div class="model-toggle">
@@ -474,16 +571,16 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
     </div>
     <div class="verb-tracker" id="verbTracker"></div>
     <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(4)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(6)">Exit-Ticket →</button>
+      <button class="nav-btn prev" onclick="goTo(6)">← Zurück</button>
+      <button class="nav-btn" onclick="goTo(8)">Exit-Ticket →</button>
     </div>
   </div>
 </section>
 
 <!-- ========== S7: EXIT TICKET ========== -->
-<section class="section" id="s7" data-index="6">
+<section class="section" id="s7" data-index="8">
   <div class="section-inner">
-    <div class="section-tag gold">06 · Reflexion</div>
+    <div class="section-tag gold">08 · Reflexion</div>
     <h2>🎫 Exit-Ticket</h2>
     <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">康德："Gedanken ohne Inhalt sind leer."<br><span class="zh">——没有内容的思维是空洞的。下课前，用两句话整理今天的收获和困惑。</span></p>
     <div class="ticket-grid">
@@ -502,21 +599,21 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
       <button class="nav-btn" onclick="submitTicket()" style="padding:13px 40px;font-size:.95rem">📮 Abgeben</button>
     </div>
     <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(5)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(7)">Zum Schluss →</button>
+      <button class="nav-btn prev" onclick="goTo(7)">← Zurück</button>
+      <button class="nav-btn" onclick="goTo(9)">Zum Schluss →</button>
     </div>
   </div>
 </section>
 
 <!-- ========== S8: FINALE ========== -->
-<section class="section" id="s8" data-index="7">
+<section class="section" id="s8" data-index="9">
   <div class="section-inner">
     <div class="masthead" style="color:var(--gold);border-color:rgba(244,162,97,.25)">Die Zeitung — Schlussredaktion</div>
     <div class="final-quote">
       <span class="cn">二分词忘了？<br>那就用过去时！</span>
     </div>
     <p class="final-sub">Präteritum — die Zeit, in der Geschichten atmen</p>
-    <p style="color:rgba(255,255,255,.3);font-size:.85rem;margin-bottom:28px">🩹 <span class="zh">记住这 15 张急救卡，你就能讲任何故事</span></p>
+    <p style="color:rgba(255,255,255,.3);font-size:.85rem;margin-bottom:28px">🩹 <span class="zh">记住这 30 张急救卡，你就能讲任何故事</span></p>
     <div class="mini-cards" id="miniCards"></div>
     <p style="margin-top:32px;font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--gold)">Gut gemacht, Reporter!</p>
     <div class="flag-strip"><span></span><span></span><span></span></div>
@@ -524,9 +621,48 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 </section>
 
 <script>
-// ---- VERB DATA ----
-const verbs=[['gehen','ging'],['essen','aß'],['sehen','sah'],['kommen','kam'],['fahren','fuhr'],['geben','gab'],['finden','fand'],['nehmen','nahm'],['schreiben','schrieb'],['bleiben','blieb'],['sprechen','sprach'],['liegen','lag'],['stehen','stand'],['tun','tat'],['wissen','wusste']];
-const N=8;let cur=0;
+// ---- VERB DATA (30 verbs, 三时态高频词表) ----
+const verbs=[
+  ['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],
+  ['machen','machte'],['sagen','sagte'],['essen','aß'],['sehen','sah'],
+  ['geben','gab'],['finden','fand'],['fahren','fuhr'],['schreiben','schrieb'],
+  ['bleiben','blieb'],['stehen','stand'],['helfen','half'],['sprechen','sprach'],
+  ['nehmen','nahm'],['schlafen','schlief'],['laufen','lief'],['tragen','trug'],
+  ['denken','dachte'],['bringen','brachte'],['wissen','wusste'],['kennen','kannte'],
+  ['werden','wurde'],['lassen','ließ'],['fallen','fiel'],['beginnen','begann'],
+  ['verstehen','verstand'],['vergessen','vergaß']
+];
+
+// Vowel groups for Nachbarn section
+const groups=[
+  {id:'ei-ie',title:'ei → ie',color:'#e76f51',verbs:[
+    ['schreiben','schrieb'],['bleiben','blieb'],['verstehen','verstand']
+  ]},
+  {id:'e-a-o',title:'e → a → o',color:'#2a9d8f',verbs:[
+    ['nehmen','nahm'],['sprechen','sprach'],['helfen','half'],['beginnen','begann']
+  ]},
+  {id:'e-a-e',title:'e → a → e',color:'#264653',verbs:[
+    ['essen','aß'],['geben','gab'],['sehen','sah'],['vergessen','vergaß']
+  ]},
+  {id:'i-a-u',title:'i → a → u',color:'#e9c46a',verbs:[
+    ['finden','fand']
+  ]},
+  {id:'a-u',title:'a → u',color:'#f4a261',verbs:[
+    ['fahren','fuhr'],['tragen','trug']
+  ]},
+  {id:'a-ie',title:'a → ie',color:'#9b5de5',verbs:[
+    ['schlafen','schlief'],['fallen','fiel'],['lassen','ließ'],['laufen','lief']
+  ]},
+  {id:'e-a-mix',title:'e → a 混合',color:'#00b4d8',verbs:[
+    ['denken','dachte'],['bringen','brachte'],['kennen','kannte'],['wissen','wusste']
+  ]},
+  {id:'special',title:'特殊变化',color:'#1d1d1d',verbs:[
+    ['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],
+    ['stehen','stand'],['werden','wurde'],['machen','machte'],['sagen','sagte']
+  ]}
+];
+
+const N=10;let cur=0;
 
 // ---- PROGRESS DOTS ----
 (function(){
@@ -547,7 +683,7 @@ function goTo(i){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   const t=document.querySelector(`[data-index="${i}"]`);t.classList.add('active');
   t.scrollIntoView({behavior:'smooth',block:'start'});cur=i;updProgress();
-  if(i===4)buildCards();if(i===7)buildMini();
+  if(i===4)buildCards();if(i===5)initQuiz();if(i===6)buildGroups();if(i===9)buildMini();
 }
 
 // ---- S3: FIND TE ----
@@ -576,6 +712,110 @@ function buildCards(){
   });
 }
 
+// ---- S5.5: BLITZ QUIZ ----
+let quizVerbs=[],quizIdx=0,quizScore=0,quizStreak=0,quizMaxStreak=0;
+function initQuiz(){
+  if(document.getElementById('quizVerb').textContent!=='—')return;
+  quizVerbs=[...verbs].sort(()=>Math.random()-.5);
+  quizIdx=0;quizScore=0;quizStreak=0;quizMaxStreak=0;
+  document.getElementById('quizScore').textContent='0';
+  document.getElementById('quizStreak').textContent='0';
+  document.getElementById('quizRemain').textContent=quizVerbs.length;
+  document.getElementById('quizProgressFill').style.width='0%';
+  document.getElementById('quizFeedback').textContent='';
+  document.getElementById('quizFeedback').className='quiz-feedback';
+  document.getElementById('quizInput').className='quiz-input';
+  document.getElementById('quizInput').value='';
+  document.getElementById('quizActive').style.display='block';
+  document.getElementById('quizDone').classList.remove('show');
+  showQuizVerb();
+  document.getElementById('quizInput').focus();
+}
+
+function showQuizVerb(){
+  if(quizIdx>=quizVerbs.length){showQuizDone();return;}
+  const [inf,past]=quizVerbs[quizIdx];
+  document.getElementById('quizVerb').textContent=inf;
+  document.getElementById('quizInput').value='';
+  document.getElementById('quizInput').className='quiz-input';
+  document.getElementById('quizFeedback').textContent='';
+  document.getElementById('quizFeedback').className='quiz-feedback';
+  document.getElementById('quizRemain').textContent=quizVerbs.length-quizIdx;
+  document.getElementById('quizProgressFill').style.width=((quizIdx/quizVerbs.length)*100)+'%';
+  setTimeout(()=>document.getElementById('quizInput').focus(),100);
+}
+
+function checkQuiz(){
+  if(quizIdx>=quizVerbs.length)return;
+  const [inf,past]=quizVerbs[quizIdx];
+  const ans=document.getElementById('quizInput').value.trim().toLowerCase();
+  const inp=document.getElementById('quizInput');
+  const fb=document.getElementById('quizFeedback');
+  if(!ans){inp.className='quiz-input wrong';fb.textContent='Bitte antworten!';fb.className='quiz-feedback wrong';setTimeout(()=>document.getElementById('quizInput').focus(),500);return;}
+  if(ans===past.toLowerCase()){
+    quizScore++;quizStreak++;
+    if(quizStreak>quizMaxStreak)quizMaxStreak=quizStreak;
+    document.getElementById('quizScore').textContent=quizScore;
+    document.getElementById('quizStreak').textContent=quizStreak;
+    inp.className='quiz-input correct';
+    fb.textContent='✅ Richtig!';
+    fb.className='quiz-feedback correct';
+  }else{
+    quizStreak=0;
+    document.getElementById('quizStreak').textContent='0';
+    inp.className='quiz-input wrong';
+    fb.innerHTML='❌ <strong>'+past+'</strong>';
+    fb.className='quiz-feedback wrong';
+  }
+  quizIdx++;
+  setTimeout(showQuizVerb,600);
+}
+
+function skipQuiz(){
+  if(quizIdx>=quizVerbs.length)return;
+  const [,past]=quizVerbs[quizIdx];
+  quizStreak=0;
+  document.getElementById('quizStreak').textContent='0';
+  const fb=document.getElementById('quizFeedback');
+  fb.innerHTML='<span style="color:var(--grau-light)">→ '+past+'</span>';
+  fb.className='quiz-feedback';
+  quizIdx++;
+  setTimeout(showQuizVerb,400);
+}
+
+function showQuizDone(){
+  document.getElementById('quizActive').style.display='none';
+  document.getElementById('quizDone').classList.add('show');
+  document.getElementById('quizFinalScore').textContent=quizScore;
+  document.getElementById('quizMaxStreak').textContent=quizMaxStreak;
+  document.getElementById('quizProgressFill').style.width='100%';
+}
+
+function restartQuiz(){
+  document.getElementById('quizActive').style.display='block';
+  document.getElementById('quizDone').classList.remove('show');
+  initQuiz();
+}
+
+// Quiz Enter key
+document.addEventListener('keydown',function(e){
+  if(cur===5&&e.key==='Enter'&&document.activeElement===document.getElementById('quizInput')){
+    e.preventDefault();checkQuiz();
+  }
+});
+
+// ---- S5.6: NACHBARN ----
+function buildGroups(){
+  const g=document.getElementById('groupGrid');if(g.children.length)return;
+  groups.forEach(grp=>{
+    const c=document.createElement('div');c.className='group-card';
+    const verbList=grp.verbs.map(([inf,past])=>`<div class="group-verb-row"><span class="gv-inf">${inf}</span><span class="gv-arrow">→</span><span class="gv-past">${past}</span></div>`).join('');
+    c.innerHTML=`<div class="group-card-header"><div class="group-card-color" style="background:${grp.color}"></div><div class="group-card-title">${grp.title}</div><div class="group-card-count">${grp.verbs.length} Verben</div></div><div class="group-card-body">${verbList}</div>`;
+    c.onclick=function(){this.classList.toggle('open')};
+    g.appendChild(c);
+  });
+}
+
 // ---- S6: VERB TRACKING ----
 function trackVerbs(){
   const text=document.getElementById('writingInput').value.toLowerCase();
@@ -597,6 +837,7 @@ function buildMini(){
 
 // ---- KEYBOARD ----
 document.addEventListener('keydown',e=>{
+  if(cur===5)return;
   if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(Math.min(cur+1,N-1));
   if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(Math.max(cur-1,0));
 });
