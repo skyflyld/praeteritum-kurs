@@ -20,35 +20,29 @@
   --shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow:0 4px 16px rgba(0,0,0,.08);
   --shadow-lg:0 12px 40px rgba(0,0,0,.12);--shadow-xl:0 20px 60px rgba(0,0,0,.16);
   --radius:6px;--radius-lg:12px;
-  --ease: cubic-bezier(.4,0,.2,1);--ease-bounce: cubic-bezier(.34,1.56,.64,1);
-  --safe-top: env(safe-area-inset-top,0px);--safe-bottom: env(safe-area-inset-bottom,0px);
-  --safe-left: env(safe-area-inset-left,0px);--safe-right: env(safe-area-inset-right,0px);
+  --ease:cubic-bezier(.4,0,.2,1);--ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  --safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);
+  --safe-left:env(safe-area-inset-left,0px);--safe-right:env(safe-area-inset-right,0px);
 }
 html{scroll-behavior:smooth;font-size:16px;background:var(--papier)}
-body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:var(--schwarz);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;touch-action:manipulation;text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:var(--schwarz);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;touch-action:manipulation;text-size-adjust:100%;-webkit-text-size-adjust:100%}
 
-/* ============== TYPOGRAPHY ============== */
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spacing:-0.01em}
-.display{font-family:'Playfair Display',Georgia,serif}
-.garamond{font-family:'EB Garamond',Georgia,serif}
 .de{font-style:italic}
 .zh{font-size:.82em;color:var(--grau-light);font-weight:400}
 .accent{color:var(--rot)}
 .gold{color:var(--gold)}
 
-/* ============== PROGRESS BAR ============== */
 #progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--schwarz),var(--rot),var(--gold));z-index:1000;transition:width .5s var(--ease)}
 #progress-dots{position:fixed;top:14px;right:24px;display:flex;gap:6px;z-index:999}
 #progress-dots .dot{width:8px;height:8px;border-radius:50%;background:var(--linie);cursor:pointer;transition:all .3s var(--ease)}
 #progress-dots .dot.active{background:var(--rot);transform:scale(1.4);box-shadow:0 0 8px rgba(193,18,31,.4)}
 #progress-dots .dot.done{background:var(--gold)}
 
-/* ============== BAUHAUS DECORATIONS ============== */
 .bauhaus-circle{position:absolute;border-radius:50%;pointer-events:none;z-index:0;opacity:.06}
 .bauhaus-rect{position:absolute;pointer-events:none;z-index:0;opacity:.04}
 .bauhaus-line{position:absolute;pointer-events:none;z-index:0;opacity:.05}
 
-/* ============== SECTION LAYOUT ============== */
 .section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;position:relative;overflow:hidden}
 .section-inner{max-width:960px;width:100%;background:var(--weiß);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:56px 48px;position:relative;z-index:1;border:1px solid var(--linie-fein)}
 .section-tag{position:absolute;top:-14px;left:28px;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:20px}
@@ -65,7 +59,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .nav-btn.outline{background:transparent;color:var(--schwarz);border:1px solid var(--linie);font-weight:400;font-size:.85rem;padding:8px 18px}
 .nav-btn.outline:hover{border-color:var(--rot);color:var(--rot)}
 
-/* ============== SECTION 1: TITLE ============== */
+/* ===== S1 TITLE ===== */
 #s1{background:linear-gradient(160deg,#0d0d0d 0%,#1a1a1a 30%,#0d0d0d 60%,#1a1210 100%)}
 #s1 .section-inner{background:transparent;border:none;box-shadow:none;text-align:center;color:var(--weiß);padding:0;max-width:800px}
 #s1 .masthead{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:40px;border:1px solid rgba(244,162,97,.3);padding:8px 28px;display:inline-block}
@@ -76,13 +70,11 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 #s1 .dek{font-size:.9rem;color:rgba(255,255,255,.35);max-width:500px;margin:0 auto 48px;line-height:1.7}
 #s1 .flag-strip{display:flex;justify-content:center;gap:0;margin-top:48px}
 #s1 .flag-strip span{width:40px;height:3px}
-#s1 .flag-strip span:nth-child(1){background:var(--schwarz)}
-#s1 .flag-strip span:nth-child(2){background:var(--rot)}
-#s1 .flag-strip span:nth-child(3){background:var(--gold)}
+#s1 .flag-strip span:nth-child(1){background:var(--schwarz)}#s1 .flag-strip span:nth-child(2){background:var(--rot)}#s1 .flag-strip span:nth-child(3){background:var(--gold)}
 
-/* ============== SECTION 2: CONTRAST ============== */
+/* ===== S2 CONTRAST ===== */
 .contrast-grid{display:grid;grid-template-columns:1fr 56px 1fr;align-items:center;gap:20px;margin-top:28px}
-.contrast-card{background:var(--papier-warm);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;border:1px solid var(--linie);cursor:pointer;transition:all .3s var(--ease);position:relative;min-height:150px;display:flex;flex-direction:column;justify-content:center}
+.contrast-card{background:var(--papier-warm);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;border:1px solid var(--linie);cursor:pointer;transition:all .3s var(--ease);min-height:150px;display:flex;flex-direction:column;justify-content:center}
 .contrast-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .contrast-card .card-label{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
 .contrast-card.perfekt .card-label{color:var(--grau-light)}
@@ -93,7 +85,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .contrast-card.flipped .flip-hint{display:block}
 .vs-badge{width:48px;height:48px;border-radius:50%;background:var(--schwarz);color:var(--weiß);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;letter-spacing:1px;flex-shrink:0;margin:0 auto}
 
-/* ============== SECTION 3: DISCOVERY ============== */
+/* ===== S3 DISCOVERY ===== */
 .verb-grid{display:flex;flex-direction:column;gap:10px;margin-top:20px}
 .verb-row{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(--papier-warm);border-radius:var(--radius);border:1px solid var(--linie-fein);transition:all .3s var(--ease)}
 .verb-row:hover{border-color:var(--linie);box-shadow:var(--shadow-sm)}
@@ -107,13 +99,9 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .steps-reveal{margin-top:24px;padding:24px;background:linear-gradient(135deg,var(--gold-light),#fff8e6);border-radius:var(--radius-lg);border:2px solid var(--gold);display:none;animation:slideIn .5s var(--ease)}
 .steps-reveal.show{display:block}
 @keyframes slideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.steps-reveal h4{color:var(--gold);margin-bottom:14px;font-size:1.15rem}
-.steps-reveal ol{counter-reset:step;list-style:none;margin:0;padding:0}
-.steps-reveal li{counter-increment:step;padding:10px 0 10px 40px;position:relative;font-size:1rem}
-.steps-reveal li::before{content:counter(step);position:absolute;left:0;top:10px;width:26px;height:26px;background:var(--gold);color:var(--weiß);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
 
-/* ============== SECTION 4: TRAP ============== */
-.trap-card{background:var(--weiß);border-radius:var(--radius-lg);padding:32px 28px;text-align:center;border:3px dashed var(--linie);margin-top:20px;cursor:pointer;transition:all .4s var(--ease);position:relative}
+/* ===== S4 TRAP ===== */
+.trap-card{background:var(--weiß);border-radius:var(--radius-lg);padding:32px 28px;text-align:center;border:3px dashed var(--linie);margin-top:20px;cursor:pointer;transition:all .4s var(--ease)}
 .trap-card:hover{border-color:var(--rot);background:#fffafa}
 .trap-card .trap-label{font-family:'Inter',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--grau-light);margin-bottom:8px}
 .trap-card .trap-verb{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;margin:12px 0;transition:all .3s}
@@ -124,21 +112,24 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .trap-rule{margin-top:20px;padding:18px 22px;background:var(--weiß);border-left:4px solid var(--rot);border-radius:0 var(--radius) var(--radius) 0;display:none;box-shadow:var(--shadow-sm)}
 .trap-rule.show{display:block;animation:slideIn .5s var(--ease)}
 
-/* ============== SECTION 5: RESCUE CARDS ============== */
+/* ===== S5/S6/S7: RESCUE CARDS (three pages) ===== */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:24px}
-.flip-card{perspective:900px;height:140px}
+.flip-card{perspective:900px;height:155px}
 .flip-card-inner{position:relative;width:100%;height:100%;transition:transform .5s var(--ease);transform-style:preserve-3d;cursor:pointer}
 .flip-card.flipped .flip-card-inner{transform:rotateY(180deg)}
 .flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;border:1px solid var(--linie)}
-.flip-card-front{background:linear-gradient(160deg,var(--weiß),#fff9f9);gap:3px}
-.flip-card-front .card-icon{font-size:1.6rem;margin-bottom:2px}
-.flip-card-front .card-inf{font-size:1.15rem;font-weight:700;color:var(--schwarz)}
-.flip-card-back{background:linear-gradient(160deg,var(--rot),#a00f1a);color:var(--weiß);transform:rotateY(180deg);font-size:1.4rem;font-weight:700;border:none}
-.flip-card-back .card-hint{font-size:.7rem;font-weight:400;opacity:.7;margin-top:4px;font-family:'Inter',sans-serif}
+.flip-card-front{background:linear-gradient(160deg,var(--weiß),#fff9f9);gap:4px}
+.flip-card-front .card-icon{font-size:1.4rem}
+.flip-card-front .card-inf{font-size:1.2rem;font-weight:700;color:var(--schwarz)}
+.flip-card-back{background:linear-gradient(160deg,var(--rot),#a00f1a);color:var(--weiß);transform:rotateY(180deg);border:none;gap:2px;padding:8px}
+.flip-card-back .fb-row{display:flex;align-items:center;gap:6px;width:100%;justify-content:center}
+.flip-card-back .fb-label{font-size:.58rem;text-transform:uppercase;letter-spacing:1px;opacity:.55;font-family:'Inter',sans-serif;min-width:42px;text-align:right}
+.flip-card-back .fb-val{font-size:.95rem;font-weight:600;font-family:'EB Garamond',Georgia,serif}
+.flip-card-back .fb-past{font-size:1.15rem;font-weight:700;color:var(--gold)}
 .card-counter{text-align:center;margin-top:16px;font-size:.85rem;color:var(--grau-light);font-family:'Inter',sans-serif}
 .card-counter strong{color:var(--rot)}
 
-/* ============== SECTION 5.5: BLITZ QUIZ ============== */
+/* ===== S8: BLITZ QUIZ ===== */
 .quiz-layout{display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:20px}
 .quiz-card{width:100%;max-width:480px;padding:36px 32px;background:var(--papier-warm);border-radius:var(--radius-lg);border:2px solid var(--linie);text-align:center;transition:all .3s var(--ease)}
 .quiz-card .quiz-infinitive{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;font-weight:700;color:var(--schwarz);margin-bottom:8px}
@@ -150,8 +141,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .quiz-input.wrong{border-color:var(--rot);background:#ffdddd;animation:shake .4s}
 @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
 .quiz-feedback{font-size:.9rem;min-height:24px;margin-top:8px;font-weight:500;font-family:'Inter',sans-serif}
-.quiz-feedback.correct{color:#2d6a4f}
-.quiz-feedback.wrong{color:var(--rot)}
+.quiz-feedback.correct{color:#2d6a4f}.quiz-feedback.wrong{color:var(--rot)}
 .quiz-stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
 .quiz-stat{padding:12px 20px;background:var(--weiß);border-radius:var(--radius);border:1px solid var(--linie-fein);text-align:center;min-width:80px}
 .quiz-stat .stat-num{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:700;color:var(--rot)}
@@ -165,7 +155,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .quiz-done .quiz-done-icon{font-size:3rem;margin-bottom:12px}
 .quiz-done .quiz-done-score{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:var(--rot);margin:8px 0}
 
-/* ============== SECTION 5.6: NACHBARN ============== */
+/* ===== S9: NACHBARN ===== */
 .group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px}
 .group-card{background:var(--papier-warm);border-radius:var(--radius-lg);border:1px solid var(--linie);overflow:hidden;cursor:pointer;transition:all .3s var(--ease)}
 .group-card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
@@ -180,7 +170,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .group-verb-row .gv-arrow{color:var(--grau-light)}
 .group-verb-row .gv-past{color:var(--rot);font-weight:600;font-family:'Playfair Display',Georgia,serif}
 
-/* ============== SECTION 6: WRITING ============== */
+/* ===== S10: WRITING ===== */
 .model-toggle{margin:16px 0}
 .model-text{padding:20px 24px;background:linear-gradient(135deg,var(--gold-light),#fff8e6);border-radius:var(--radius-lg);display:none;font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;line-height:1.8;border-left:3px solid var(--gold)}
 .model-text.show{display:block;animation:slideIn .4s var(--ease)}
@@ -192,7 +182,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .verb-tracker .vtag{padding:5px 14px;border-radius:20px;background:var(--papier);border:1px solid var(--linie);font-size:.82rem;transition:all .3s var(--ease);font-family:'Inter',sans-serif}
 .verb-tracker .vtag.used{background:var(--rot);color:var(--weiß);border-color:var(--rot);animation:pop .3s var(--ease-bounce)}
 
-/* ============== SECTION 7: EXIT TICKET ============== */
+/* ===== S11: EXIT TICKET ===== */
 .ticket-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
 .ticket-card{background:linear-gradient(170deg,#fffef8,#fef9e6);border-radius:var(--radius-lg);padding:28px;border:1px solid #e8dca0;position:relative;box-shadow:var(--shadow-sm)}
 .ticket-card::before{content:'';position:absolute;top:-1px;left:50%;width:24px;height:12px;background:var(--papier);border-radius:0 0 50% 50%;transform:translateX(-50%);border:1px solid #e8dca0;border-top:none}
@@ -200,150 +190,90 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 .ticket-card textarea{width:100%;min-height:80px;border:1px dashed var(--linie);border-radius:var(--radius);padding:12px;background:transparent;font-family:'EB Garamond',Georgia,serif;font-size:.95rem;resize:vertical;transition:border-color .3s}
 .ticket-card textarea:focus{outline:none;border-color:var(--gold);border-style:solid}
 
-/* ============== SECTION 8: FINALE ============== */
-#s8{background:linear-gradient(160deg,#0d0d0d 0%,#1a1a1a 30%,#0d0d0d 60%,#1a1210 100%)}
-#s8 .section-inner{background:transparent;border:none;box-shadow:none;text-align:center;color:var(--weiß);padding:0;max-width:800px}
-#s8 .final-quote{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,4vw,2.8rem);line-height:1.3;margin-bottom:20px}
-#s8 .final-quote .cn{color:var(--gold)}
-#s8 .final-sub{font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.5);margin-bottom:36px}
-#s8 .mini-cards{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:28px}
-#s8 .mini-card{padding:6px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:20px;font-size:.82rem;color:rgba(255,255,255,.55);font-family:'EB Garamond',Georgia,serif}
-#s8 .flag-strip{display:flex;justify-content:center;gap:0;margin-top:40px}
-#s8 .flag-strip span{width:50px;height:2px}
-#s8 .flag-strip span:nth-child(1){background:var(--schwarz)}#s8 .flag-strip span:nth-child(2){background:var(--rot)}#s8 .flag-strip span:nth-child(3){background:var(--gold)}
+/* ===== S12: FINALE ===== */
+#s12{background:linear-gradient(160deg,#0d0d0d 0%,#1a1a1a 30%,#0d0d0d 60%,#1a1210 100%)}
+#s12 .section-inner{background:transparent;border:none;box-shadow:none;text-align:center;color:var(--weiß);padding:0;max-width:800px}
+#s12 .final-quote{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,4vw,2.8rem);line-height:1.3;margin-bottom:20px}
+#s12 .final-quote .cn{color:var(--gold)}
+#s12 .final-sub{font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.5);margin-bottom:36px}
+#s12 .mini-cards{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:28px}
+#s12 .mini-card{padding:6px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:20px;font-size:.82rem;color:rgba(255,255,255,.55);font-family:'EB Garamond',Georgia,serif}
+#s12 .flag-strip{display:flex;justify-content:center;gap:0;margin-top:40px}
+#s12 .flag-strip span{width:50px;height:2px}
+#s12 .flag-strip span:nth-child(1){background:var(--schwarz)}#s12 .flag-strip span:nth-child(2){background:var(--rot)}#s12 .flag-strip span:nth-child(3){background:var(--gold)}
 
-/* ============== TOAST ============== */
 .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:var(--schwarz);color:var(--weiß);padding:14px 32px;border-radius:30px;font-size:.88rem;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;font-family:'Inter',sans-serif;box-shadow:var(--shadow-xl)}
 .toast.show{opacity:1}
-
-/* ============== KEYBOARD HINT ============== */
 .key-hint{position:fixed;bottom:24px;left:24px;font-size:.75rem;color:var(--grau-light);z-index:998;opacity:.6;font-family:'Inter',sans-serif}
 
-/* ============== RESPONSIVE ============== */
+/* ===== RESPONSIVE ===== */
 @media(max-width:479px){
   html{font-size:15px}
-  .section{min-height:100vh;min-height:100dvh;padding:calc(var(--safe-top) + 8px) 12px calc(var(--safe-bottom) + 16px)}
-  .section-inner{padding:28px 16px;border-radius:8px;box-shadow:var(--shadow);margin:0 auto}
+  .section{min-height:100dvh;padding:calc(var(--safe-top)+8px) 12px calc(var(--safe-bottom)+16px)}
+  .section-inner{padding:28px 16px;border-radius:8px;box-shadow:var(--shadow)}
   .section-tag{top:-10px;left:16px;font-size:.65rem;padding:3px 12px;letter-spacing:2px}
-  .section-inner h2{font-size:1.25rem;line-height:1.25;margin-bottom:6px}
+  .section-inner h2{font-size:1.25rem;line-height:1.25}
   .nav-row{margin-top:24px;padding-top:14px;gap:10px}
   .nav-btn{padding:10px 20px;font-size:.82rem;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center}
   #s1 .masthead{font-size:.65rem;letter-spacing:3px;padding:6px 18px;margin-bottom:24px}
-  #s1 .headline{font-size:2rem}
-  #s1 .subhead{font-size:1rem}
-  #s1 .dek{font-size:.8rem;padding:0 8px}
+  #s1 .headline{font-size:2rem}#s1 .subhead{font-size:1rem}#s1 .dek{font-size:.8rem}
   .contrast-grid{grid-template-columns:1fr;gap:8px}
   .contrast-card{padding:18px 14px;min-height:120px}
-  .contrast-card .card-label{font-size:.7rem;letter-spacing:1.5px}
-  .contrast-card .example-text{font-size:.95rem}
   .vs-badge{width:36px;height:36px;font-size:.7rem;margin:4px auto}
   .verb-row{padding:10px 14px;gap:10px}
-  .verb-row .präsens{min-width:70px;font-size:.95rem}
-  .verb-row .prät{font-size:1rem}
-  .steps-reveal{padding:16px}
-  .steps-reveal li{font-size:.9rem;padding:8px 0 8px 34px}
-  .trap-card{padding:20px 16px}
-  .trap-card .trap-label{font-size:.7rem}
-  .trap-card .trap-verb{font-size:1.6rem}
-  .trap-rule{padding:14px 16px}
   .cards-grid{grid-template-columns:repeat(3,1fr);gap:8px}
-  .flip-card{height:110px}
-  .flip-card-front .card-icon{font-size:1.2rem}
-  .flip-card-front .card-inf{font-size:.9rem}
-  .flip-card-back{font-size:1.1rem}
+  .flip-card{height:130px}
+  .flip-card-front .card-inf{font-size:.95rem}
+  .flip-card-back .fb-val{font-size:.78rem}
+  .flip-card-back .fb-past{font-size:.9rem}
+  .flip-card-back .fb-label{font-size:.5rem;min-width:32px}
   .card-counter{font-size:.78rem}
-  .quiz-card{padding:24px 18px}
-  .quiz-card .quiz-infinitive{font-size:1.8rem}
+  .quiz-card{padding:24px 18px}.quiz-card .quiz-infinitive{font-size:1.8rem}
   .quiz-input{width:160px;font-size:1.1rem;padding:10px 12px}
-  .quiz-stats{gap:12px}
-  .quiz-stat{padding:10px 14px;min-width:60px}
-  .quiz-stat .stat-num{font-size:1.3rem}
+  .quiz-stats{gap:12px}.quiz-stat{padding:10px 14px;min-width:60px}.quiz-stat .stat-num{font-size:1.3rem}
   .group-grid{grid-template-columns:1fr;gap:10px}
-  .group-card-header{padding:14px}
-  .group-card-title{font-size:.95rem}
-  .model-text{font-size:.9rem;padding:14px 16px}
-  .writing-area textarea{min-height:130px;font-size:.9rem;padding:14px}
-  .verb-tracker .vtag{font-size:.75rem;padding:4px 10px}
-  .ticket-grid{grid-template-columns:1fr;gap:14px}
-  .ticket-card{padding:20px 16px}
-  .ticket-card h4{font-size:.95rem}
-  .ticket-card textarea{min-height:64px;font-size:.85rem}
-  #s8 .final-quote{font-size:1.4rem}
-  #s8 .final-sub{font-size:.9rem}
-  #s8 .mini-cards{gap:6px}
-  #s8 .mini-card{padding:5px 12px;font-size:.75rem}
-  .bauhaus-circle,.bauhaus-rect,.bauhaus-line{display:none}
-  .key-hint{display:none}
-  #progress-dots{top:calc(var(--safe-top) + 8px);right:10px;gap:4px}
-  #progress-dots .dot{width:7px;height:7px}
+  .ticket-grid{grid-template-columns:1fr;gap:14px}.ticket-card{padding:20px 16px}
+  #s12 .final-quote{font-size:1.4rem}#s12 .final-sub{font-size:.9rem}
+  .bauhaus-circle,.bauhaus-rect,.bauhaus-line,.key-hint{display:none}
+  #progress-dots{top:calc(var(--safe-top)+8px);right:10px;gap:4px}#progress-dots .dot{width:7px;height:7px}
   #progress-bar{height:2px}
 }
 @media(min-width:480px) and (max-width:767px){
   html{font-size:15.5px}
-  .section{min-height:100dvh;padding:calc(var(--safe-top) + 16px) 16px calc(var(--safe-bottom) + 24px)}
+  .section{min-height:100dvh;padding:calc(var(--safe-top)+16px) 16px calc(var(--safe-bottom)+24px)}
   .section-inner{padding:32px 22px;border-radius:10px}
-  .section-tag{left:20px;font-size:.68rem}
-  .section-inner h2{font-size:1.4rem}
+  .section-tag{left:20px;font-size:.68rem}.section-inner h2{font-size:1.4rem}
   .nav-btn{min-height:44px}
-  .contrast-grid{grid-template-columns:1fr;gap:10px}
-  .vs-badge{margin:6px auto}
-  .cards-grid{grid-template-columns:repeat(4,1fr);gap:10px}
-  .flip-card{height:120px}
-  .group-grid{grid-template-columns:1fr;gap:12px}
-  .ticket-grid{grid-template-columns:1fr;gap:16px}
-  .key-hint{display:none}
-  .bauhaus-circle,.bauhaus-rect,.bauhaus-line{display:none}
+  .contrast-grid{grid-template-columns:1fr;gap:10px}.vs-badge{margin:6px auto}
+  .cards-grid{grid-template-columns:repeat(4,1fr);gap:10px}.flip-card{height:140px}
+  .group-grid{grid-template-columns:1fr;gap:12px}.ticket-grid{grid-template-columns:1fr;gap:16px}
+  .key-hint,.bauhaus-circle,.bauhaus-rect,.bauhaus-line{display:none}
 }
 @media(min-width:768px) and (max-width:1023px){
-  .section{padding:50px 24px}
-  .section-inner{padding:44px 36px}
-  .cards-grid{grid-template-columns:repeat(5,1fr);gap:12px}
-  .flip-card{height:130px}
+  .section{padding:50px 24px}.section-inner{padding:44px 36px}
+  .cards-grid{grid-template-columns:repeat(4,1fr);gap:12px}
   .group-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-  .ticket-grid{gap:20px}
   #s1 .headline{font-size:3.2rem}
-  .key-hint{bottom:18px;left:18px;font-size:.7rem}
 }
 @media(min-width:1024px) and (max-width:1439px){
   .section-inner{max-width:880px;padding:52px 48px}
-  .cards-grid{grid-template-columns:repeat(5,1fr)}
-  .group-grid{grid-template-columns:repeat(3,1fr)}
+  .cards-grid{grid-template-columns:repeat(5,1fr)}.group-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(min-width:1440px){
   html{font-size:18px}
-  .section{min-height:100vh;justify-content:center;padding:60px 40px}
+  .section{min-height:100vh;padding:60px 40px}
   .section-inner{max-width:1100px;padding:64px 64px;border-radius:16px;box-shadow:var(--shadow-xl)}
   .section-tag{top:-16px;left:36px;font-size:.75rem;padding:6px 20px;letter-spacing:3px}
-  .section-inner h2{font-size:2rem;margin-bottom:12px}
+  .section-inner h2{font-size:2rem}
   .nav-btn{padding:14px 34px;font-size:1rem}
-  #s1 .headline{font-size:5rem}
-  #s1 .subhead{font-size:1.6rem}
-  #s1 .dek{font-size:1rem;max-width:600px}
-  .contrast-card{padding:34px 30px;min-height:170px}
-  .contrast-card .example-text{font-size:1.3rem}
-  .vs-badge{width:56px;height:56px;font-size:.9rem}
-  .verb-row{padding:16px 24px}
-  .verb-row .präsens{font-size:1.15rem;min-width:110px}
-  .verb-row .prät{font-size:1.3rem}
-  .steps-reveal{padding:28px;margin-top:28px}
-  .trap-card{padding:40px 36px}
-  .trap-card .trap-verb{font-size:2.6rem}
-  .cards-grid{grid-template-columns:repeat(5,1fr);gap:18px}
-  .flip-card{height:160px}
-  .flip-card-front .card-icon{font-size:1.8rem}
-  .flip-card-front .card-inf{font-size:1.25rem}
-  .flip-card-back{font-size:1.5rem}
-  .quiz-card .quiz-infinitive{font-size:2.8rem}
-  .quiz-input{width:240px;font-size:1.5rem}
+  #s1 .headline{font-size:5rem}#s1 .subhead{font-size:1.6rem}
+  .contrast-card{padding:34px 30px;min-height:170px}.vs-badge{width:56px;height:56px}
+  .cards-grid{grid-template-columns:repeat(5,1fr);gap:18px}.flip-card{height:170px}
+  .flip-card-front .card-inf{font-size:1.3rem}
+  .flip-card-back .fb-val{font-size:1.05rem}.flip-card-back .fb-past{font-size:1.3rem}
+  .quiz-card .quiz-infinitive{font-size:2.8rem}.quiz-input{width:240px;font-size:1.5rem}
   .group-grid{grid-template-columns:repeat(4,1fr);gap:18px}
-  .writing-area textarea{min-height:200px;font-size:1.15rem;padding:22px}
-  .model-text{padding:24px 28px;font-size:1.1rem}
-  .ticket-card{padding:32px}
-  .ticket-card h4{font-size:1.15rem}
-  .ticket-card textarea{min-height:100px;font-size:1rem}
-  #s8 .final-quote{font-size:3.2rem}
-  #s8 .final-sub{font-size:1.3rem}
-  #s8 .mini-card{font-size:.9rem;padding:7px 18px}
+  #s12 .final-quote{font-size:3.2rem}#s12 .final-sub{font-size:1.3rem}
 }
 @media(hover:none) and (pointer:coarse){
   .flip-card,.contrast-card,.trap-card,.verb-row .prät,.group-card{cursor:default}
@@ -354,24 +284,22 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   #progress-bar,#progress-dots,.key-hint,.nav-row,.toast{display:none!important}
   .section-inner{box-shadow:none;border:1px solid #ccc}
 }
-.section{display:none}
-.section.active{display:flex}
+.section{display:none}.section.active{display:flex}
 </style>
 </head>
 <body>
 
-<div id="progress-bar"></div>
-<div id="progress-dots"></div>
+<div id="progress-bar"></div><div id="progress-dots"></div>
 <div id="toast" class="toast"></div>
-<div class="key-hint">← → 翻页 &nbsp;|&nbsp; 点击卡片交互</div>
+<div class="key-hint">← → 翻页 | 点击卡片交互</div>
 
-<!-- ========== S1: TITLE ========== -->
+<!-- S1: TITLE -->
 <section class="section active" id="s1" data-index="0">
   <div class="section-inner">
     <div class="masthead">Frankfurter Allgemeine — Feuilleton</div>
     <h1 class="headline"><span class="highlight">Präteritum</span></h1>
     <p class="subhead">Die Zeit der Geschichten</p>
-    <p class="dek">口语用 Perfekt，新闻用 Präteritum。<br>不用助动词 haben/sein，动词自己变形。<br>学会它，你就能像记者一样讲故事。</p>
+    <p class="dek">口语用 Perfekt，新闻用 Präteritum。<br>不用助动词 haben/sein，动词自己变形。</p>
     <div class="flag-strip"><span></span><span></span><span></span></div>
   </div>
   <div class="nav-row" style="position:absolute;bottom:40px;left:50%;transform:translateX(-50%);border:none;margin:0;padding:0;width:auto">
@@ -379,45 +307,32 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
   </div>
 </section>
 
-<!-- ========== S2: CONTRAST ========== -->
+<!-- S2: CONTRAST -->
 <section class="section" id="s2" data-index="1">
   <div class="bauhaus-circle" style="width:300px;height:300px;top:-60px;right:-80px;background:var(--rot)"></div>
   <div class="bauhaus-rect" style="width:120px;height:120px;bottom:-30px;left:-30px;background:var(--gold);transform:rotate(15deg)"></div>
   <div class="section-inner">
     <div class="section-tag dark">01 · Vergleich</div>
     <h2>Zwei Sprachen, zwei Welten</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">口语用 Perfekt（haben/sein + 二分词），新闻用 Präteritum（动词自己变形）。<br><span class="zh">点击卡片查看更多例句</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">口语用 Perfekt，新闻用 Präteritum。<br><span class="zh">点击卡片查看更多例句</span></p>
     <div class="contrast-grid">
-      <div class="contrast-card perfekt" onclick="this.classList.toggle('flipped')">
-        <div class="card-label">🗣️ Alltag · 口语</div>
-        <div class="example-text"><em style="color:var(--grau-light)">Perfekt</em><br>Der Kanzler <strong>hat</strong> gestern Hangzhou <strong>besucht</strong>.</div>
-        <div class="flip-hint">„Ich <strong>habe</strong> die Stadt <strong>geliebt</strong>."<br>„Wir <strong>sind</strong> durch den Park <strong>gegangen</strong>."</div>
-      </div>
+      <div class="contrast-card perfekt" onclick="this.classList.toggle('flipped')"><div class="card-label">🗣️ Alltag</div><div class="example-text"><em style="color:var(--grau-light)">Perfekt</em><br>Der Kanzler <strong>hat</strong> gestern Hangzhou <strong>besucht</strong>.</div><div class="flip-hint">„Ich <strong>habe</strong> die Stadt <strong>geliebt</strong>."<br>„Wir <strong>sind</strong> durch den Park <strong>gegangen</strong>."</div></div>
       <div class="vs-badge">VS</div>
-      <div class="contrast-card praeteritum flipped" onclick="this.classList.toggle('flipped')">
-        <div class="card-label">📰 Nachrichten · 新闻</div>
-        <div class="example-text"><em style="color:var(--rot)">Präteritum</em><br>Der Kanzler <strong style="color:var(--rot)">besuchte</strong> gestern Hangzhou.</div>
-        <div class="flip-hint">Die Zeitung: Er <strong style="color:var(--rot)">nahm</strong> den Zug.<br>Der Bericht: Man <strong style="color:var(--rot)">empfing</strong> ihn herzlich.</div>
-      </div>
+      <div class="contrast-card praeteritum flipped" onclick="this.classList.toggle('flipped')"><div class="card-label">📰 Nachrichten</div><div class="example-text"><em style="color:var(--rot)">Präteritum</em><br>Der Kanzler <strong style="color:var(--rot)">besuchte</strong> gestern Hangzhou.</div><div class="flip-hint">Er <strong style="color:var(--rot)">nahm</strong> den Zug.<br>Man <strong style="color:var(--rot)">empfing</strong> ihn herzlich.</div></div>
     </div>
-    <p style="margin-top:18px;text-align:center;font-size:.85rem;color:var(--grau-light);font-family:'Inter',sans-serif">
-      📌 Perfekt = haben/sein + Partizip II &nbsp;|&nbsp; Präteritum = 动词词干变形，<strong style="color:var(--rot)">不用助动词</strong>
-    </p>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(0)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(2)">Muster entdecken →</button>
-    </div>
+    <p style="margin-top:18px;text-align:center;font-size:.85rem;color:var(--grau-light)">📌 Perfekt = haben/sein + Partizip II | Präteritum = <strong style="color:var(--rot)">不用助动词</strong></p>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(0)">← Zurück</button><button class="nav-btn" onclick="goTo(2)">Muster entdecken →</button></div>
   </div>
 </section>
 
-<!-- ========== S3: DISCOVERY ========== -->
+<!-- S3: DISCOVERY -->
 <section class="section" id="s3" data-index="2">
   <div class="bauhaus-circle" style="width:160px;height:160px;bottom:-40px;right:60px;background:var(--gold)"></div>
   <div class="bauhaus-line" style="width:200px;height:2px;top:80px;left:-40px;background:var(--rot);transform:rotate(-30deg)"></div>
   <div class="section-inner">
     <div class="section-tag red">02 · Entdeckung</div>
     <h2>Entdecke das Muster!</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">规则动词的 Präteritum 有统一规律。<br><span class="zh">点击下面每个过去时中的 </span><strong class="zh">te</strong><span class="zh">，看看规律是什么。</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">规则动词的 Präteritum 有统一规律。<br><span class="zh">点击下面每个过去时中的 <strong>te</strong>，看看规律是什么。</span></p>
     <div class="verb-grid" id="verbGrid">
       <div class="verb-row" data-found="false"><span class="präsens">machen</span><span class="arrow">→</span><span class="prät" onclick="findTe(this)">mach<span class="te-hl">te</span></span><span class="zh" style="margin-left:auto">做</span></div>
       <div class="verb-row" data-found="false"><span class="präsens">lernen</span><span class="arrow">→</span><span class="prät" onclick="findTe(this)">lern<span class="te-hl">te</span></span><span class="zh" style="margin-left:auto">学习</span></div>
@@ -425,195 +340,130 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
       <div class="verb-row" data-found="false"><span class="präsens">spielen</span><span class="arrow">→</span><span class="prät" onclick="findTe(this)">spiel<span class="te-hl">te</span></span><span class="zh" style="margin-left:auto">玩</span></div>
       <div class="verb-row" data-found="false"><span class="präsens">fragen</span><span class="arrow">→</span><span class="prät" onclick="findTe(this)">frag<span class="te-hl">te</span></span><span class="zh" style="margin-left:auto">问</span></div>
     </div>
-    <div class="steps-reveal" id="stepsReveal">
-      <h4>🎉 Richtig! Die 3-Schritte-Regel</h4>
-      <ol>
-        <li><strong>Stamm finden</strong> <span class="zh">— 不定式去 -en，找词干</span><br><span style="font-size:.9em;color:var(--grau-light)">machen → mach-</span></li>
-        <li><strong>-te anhängen</strong> <span class="zh">— 词干直接加 -te</span><br><span style="font-size:.9em;color:var(--grau-light)">mach + te → machte</span></li>
-        <li><strong>Kein -ge-, kein Hilfsverb</strong> <span class="zh">— 不要 ge-，不要助动词！</span></li>
-      </ol>
-      <p style="margin-top:14px;color:var(--gold);font-weight:600;font-family:'Inter',sans-serif;font-size:.9rem">
-        💡 比 Perfekt 简单：不需要记二分词，加 -te 就行。
-      </p>
-    </div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(1)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(3)">Achtung, Falle! →</button>
-    </div>
+    <div class="steps-reveal" id="stepsReveal"><h4>🎉 Richtig! Die 3-Schritte-Regel</h4><ol><li><strong>Stamm finden</strong> — 不定式去 -en<br>machen → mach-</li><li><strong>-te anhängen</strong><br>mach + te → machte</li><li><strong>Kein -ge-, kein Hilfsverb</strong></li></ol><p style="margin-top:14px;color:var(--gold);font-weight:600;font-size:.9rem">💡 比 Perfekt 简单：不需要记二分词，加 -te 就行。</p></div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(1)">← Zurück</button><button class="nav-btn" onclick="goTo(3)">Achtung, Falle! →</button></div>
   </div>
 </section>
 
-<!-- ========== S4: TRAP ========== -->
+<!-- S4: TRAP -->
 <section class="section" id="s4" data-index="3">
   <div class="bauhaus-rect" style="width:80px;height:200px;top:60px;right:40px;background:var(--rot);transform:rotate(10deg);opacity:.06"></div>
   <div class="bauhaus-rect" style="width:180px;height:80px;bottom:80px;left:-20px;background:var(--gold);opacity:.05"></div>
   <div class="section-inner">
     <div class="section-tag red">03 · Ausnahme</div>
     <h2>⚠️ Achtung, Falle!</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">规则几乎完美。但德语总有一个小例外。<br><span class="zh">试试 arbeiten — 按三步法，arbeit + te = arbeit-te，对吗？</span></p>
-    <div class="trap-card" id="trapCard" onclick="revealTrap()">
-      <div class="trap-label">Stamm = arbeit- → arbeit + te = ?</div>
-      <div class="trap-verb old" id="trapVerb">arbeit-te ❓</div>
-      <div class="trap-reveal">
-        <div class="trap-verb" style="color:var(--rot);font-size:2.2rem">arbeit<span style="border-bottom:3px solid var(--gold);padding-bottom:2px">ete</span> ✅</div>
-        <p style="margin-top:14px;font-size:.95rem"><strong>Regel entdeckt:</strong><br><span class="zh">词干以 <strong>-t</strong> 或 <strong>-d</strong> 结尾 → 加 <strong>-ete</strong>，不是 -te！</span><br><span style="color:var(--grau-light);font-size:.85rem">没有这个 e，德国人自己都念不顺。</span></p>
-      </div>
-    </div>
-    <div class="trap-rule" id="trapRule">
-      <strong style="font-family:'Playfair Display',Georgia,serif;font-size:1.05rem">🔑 Die -t/-d Regel</strong><br><br>
-      <span class="zh">当词干以 -t 或 -d 结尾时，在 -te 前嵌入一个 -e-：</span><br>
-      <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem">
-        arbeiten → arbeit- → arbeit<b>ete</b>&nbsp;&nbsp;|&nbsp;&nbsp;
-        reden → red- → red<b>ete</b>&nbsp;&nbsp;|&nbsp;&nbsp;
-        warten → wart- → wart<b>ete</b>
-      </span>
-    </div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(2)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(4)">Notfall-Karten →</button>
-    </div>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">规则几乎完美。但德语总有一个小例外。<br><span class="zh">试试 arbeiten — arbeit + te = arbeit-te，对吗？</span></p>
+    <div class="trap-card" id="trapCard" onclick="revealTrap()"><div class="trap-label">Stamm = arbeit- → arbeit + te = ?</div><div class="trap-verb old" id="trapVerb">arbeit-te ❓</div><div class="trap-reveal"><div class="trap-verb" style="color:var(--rot);font-size:2.2rem">arbeit<span style="border-bottom:3px solid var(--gold);padding-bottom:2px">ete</span> ✅</div><p style="margin-top:14px;font-size:.95rem"><strong>Regel entdeckt:</strong><br>词干以 <strong>-t</strong> 或 <strong>-d</strong> 结尾 → 加 <strong>-ete</strong>！</p></div></div>
+    <div class="trap-rule" id="trapRule"><strong style="font-family:'Playfair Display',Georgia,serif;font-size:1.05rem">🔑 Die -t/-d Regel</strong><br><br>arbeiten → arbeit<b>ete</b> | reden → red<b>ete</b> | warten → wart<b>ete</b></div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(2)">← Zurück</button><button class="nav-btn" onclick="goTo(4)">🩹 Notfall-Karten →</button></div>
   </div>
 </section>
 
-<!-- ========== S5: RESCUE CARDS ========== -->
+<!-- S5: RESCUE CARDS — WOCHE 1 -->
 <section class="section" id="s5" data-index="4">
   <div class="section-inner">
-    <div class="section-tag gold">04 · Notfallkarten</div>
-    <h2>🩹 Notfall-Karten</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词不需要背几百个。30 张急救卡，讲故事够用了。<br><span class="zh">点击卡片翻转，看看你认识几个。</span></p>
-    <div class="cards-grid" id="cardsGrid"></div>
-    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipCount">0</strong>/30 &nbsp;|&nbsp; <span class="zh">全部翻开看看，哪些你认识？</span></p>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(3)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(5)">⚡ Blitz-Quiz →</button>
-    </div>
+    <div class="section-tag gold">04 · Woche 1</div>
+    <h2>🩹 Notfall-Karten · Woche 1</h2>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">最最常用的 10 个动词。三个形式一起记！<br><span class="zh">点击卡片翻转——正面原形，背面三个时态。</span></p>
+    <div class="cards-grid" id="cardsW1"></div>
+    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipW1">0</strong>/10</p>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(3)">← Zurück</button><button class="nav-btn" onclick="goTo(5)">Woche 2 →</button></div>
   </div>
 </section>
 
-<!-- ========== S5.5: BLITZ QUIZ ========== -->
-<section class="section" id="s5b" data-index="5">
+<!-- S6: RESCUE CARDS — WOCHE 2 -->
+<section class="section" id="s6" data-index="5">
+  <div class="section-inner">
+    <div class="section-tag red">05 · Woche 2</div>
+    <h2>🩹 Notfall-Karten · Woche 2</h2>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">故事里最常用的 10 个动词。<br><span class="zh">正面原形，背面三个时态。</span></p>
+    <div class="cards-grid" id="cardsW2"></div>
+    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipW2">0</strong>/10</p>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(4)">← Zurück</button><button class="nav-btn" onclick="goTo(6)">Woche 3 →</button></div>
+  </div>
+</section>
+
+<!-- S7: RESCUE CARDS — WOCHE 3 -->
+<section class="section" id="s7" data-index="6">
+  <div class="section-inner">
+    <div class="section-tag dark">06 · Woche 3</div>
+    <h2>🩹 Notfall-Karten · Woche 3</h2>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">进阶常用动词，覆盖日常对话和简单写作。<br><span class="zh">正面原形，背面三个时态。</span></p>
+    <div class="cards-grid" id="cardsW3"></div>
+    <p class="card-counter"><span class="zh">已翻面：</span><strong id="flipW3">0</strong>/10</p>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(5)">← Zurück</button><button class="nav-btn" onclick="goTo(7)">⚡ Blitz-Quiz →</button></div>
+  </div>
+</section>
+
+<!-- S8: BLITZ QUIZ -->
+<section class="section" id="s8" data-index="7">
   <div class="bauhaus-circle" style="width:180px;height:180px;bottom:-60px;left:-60px;background:var(--rot)"></div>
   <div class="section-inner">
-    <div class="section-tag red">05 · Blitz-Quiz</div>
+    <div class="section-tag red">07 · Blitz-Quiz</div>
     <h2>⚡ Blitz-Quiz: 30 Verben</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">看到原形，输入过去时。答对计分，不会就跳过。<br><span class="zh">每题限时不计时，但要快！按 Enter 确认答案。</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">看到原形，输入过去时。按 Enter 确认。</p>
     <div id="quizActive">
       <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
       <div class="quiz-layout">
-        <div class="quiz-stats">
-          <div class="quiz-stat"><div class="stat-num" id="quizScore">0</div><div class="stat-label">richtig</div></div>
-          <div class="quiz-stat"><div class="stat-num" id="quizStreak">0</div><div class="stat-label">Streak 🔥</div></div>
-          <div class="quiz-stat"><div class="stat-num" id="quizRemain">30</div><div class="stat-label">übrig</div></div>
-        </div>
-        <div class="quiz-card" id="quizCard">
-          <div class="quiz-infinitive" id="quizVerb">—</div>
-          <div class="quiz-hint"><span class="zh">输入 Präteritum 过去时</span></div>
-          <div class="quiz-input-row">
-            <input type="text" class="quiz-input" id="quizInput" placeholder="…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <button class="nav-btn" onclick="checkQuiz()" style="padding:10px 20px;font-size:.85rem;min-width:44px">✓</button>
-          </div>
-          <div class="quiz-feedback" id="quizFeedback"></div>
-        </div>
+        <div class="quiz-stats"><div class="quiz-stat"><div class="stat-num" id="quizScore">0</div><div class="stat-label">richtig</div></div><div class="quiz-stat"><div class="stat-num" id="quizStreak">0</div><div class="stat-label">Streak</div></div><div class="quiz-stat"><div class="stat-num" id="quizRemain">30</div><div class="stat-label">übrig</div></div></div>
+        <div class="quiz-card"><div class="quiz-infinitive" id="quizVerb">—</div><div class="quiz-hint">输入 Präteritum 过去时</div><div class="quiz-input-row"><input type="text" class="quiz-input" id="quizInput" placeholder="…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><button class="nav-btn" onclick="checkQuiz()" style="padding:10px 20px;font-size:.85rem">✓</button></div><div class="quiz-feedback" id="quizFeedback"></div></div>
         <button class="quiz-skip-btn" onclick="skipQuiz()">überspringen →</button>
       </div>
     </div>
-    <div class="quiz-done" id="quizDone">
-      <div class="quiz-done-icon">🏆</div>
-      <p style="font-size:1.1rem;margin-bottom:4px"><span class="zh">测验完成！</span></p>
-      <div class="quiz-done-score"><span id="quizFinalScore">0</span> / 30</div>
-      <p style="color:var(--grau-light);font-size:.9rem"><span class="zh">最高连击：</span><strong style="color:var(--gold)" id="quizMaxStreak">0</strong> 🔥</p>
-      <button class="nav-btn outline" onclick="restartQuiz()" style="margin-top:16px">🔄 <span class="zh">再来一轮</span></button>
-    </div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(4)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(6)">Nachbarn finden →</button>
-    </div>
+    <div class="quiz-done" id="quizDone"><div class="quiz-done-icon">🏆</div><p style="font-size:1.1rem">测验完成！</p><div class="quiz-done-score"><span id="quizFinalScore">0</span> / 30</div><p style="color:var(--grau-light);font-size:.9rem">最高连击：<strong style="color:var(--gold)" id="quizMaxStreak">0</strong> 🔥</p><button class="nav-btn outline" onclick="restartQuiz()" style="margin-top:16px">🔄 再来一轮</button></div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(6)">← Zurück</button><button class="nav-btn" onclick="goTo(8)">Nachbarn finden →</button></div>
   </div>
 </section>
 
-<!-- ========== S5.6: NACHBARN ========== -->
-<section class="section" id="s5c" data-index="6">
+<!-- S9: NACHBARN -->
+<section class="section" id="s9" data-index="8">
   <div class="bauhaus-rect" style="width:100px;height:260px;top:40px;right:-20px;background:var(--gold);transform:rotate(8deg);opacity:.05"></div>
   <div class="section-inner">
-    <div class="section-tag gold">06 · Nachbarn</div>
+    <div class="section-tag gold">08 · Nachbarn</div>
     <h2>🔍 Nachbarn finden</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词按元音变化模式分组。找邻居，一起记！<br><span class="zh">点击每组展开，看看哪些动词是"一家人"。</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">不规则动词按元音变化分组，找邻居一起记！<br><span class="zh">点击每组展开。</span></p>
     <div class="group-grid" id="groupGrid"></div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(5)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(7)">Schreiben! →</button>
-    </div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(7)">← Zurück</button><button class="nav-btn" onclick="goTo(9)">Schreiben! →</button></div>
   </div>
 </section>
 
-<!-- ========== S6: WRITING ========== -->
-<section class="section" id="s6" data-index="7">
+<!-- S10: WRITING -->
+<section class="section" id="s10" data-index="9">
   <div class="bauhaus-circle" style="width:200px;height:200px;top:-50px;left:-60px;background:var(--gold)"></div>
   <div class="section-inner">
-    <div class="section-tag dark">07 · Werkstatt</div>
+    <div class="section-tag dark">09 · Werkstatt</div>
     <h2>Ein Tag im Leben eines Reporters</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">歌德："Es ist nicht genug zu wissen, man muss auch anwenden."<br><span class="zh">——知道还不够，得用起来。用急救卡里的动词，写一段"记者的某一天"。</span></p>
-    <div class="model-toggle">
-      <button class="nav-btn outline" onclick="document.getElementById('modelText').classList.toggle('show')">
-        📋 <span class="zh">范文参考</span>
-      </button>
-    </div>
-    <div class="model-text" id="modelText">
-      <strong>📰 Beispiel:</strong><br>
-      Der Reporter <em style="color:var(--rot)">kam</em> um 7 Uhr ins Büro. 
-      Er <em style="color:var(--rot)">aß</em> ein Sandwich und <em style="color:var(--rot)">trank</em> einen Kaffee. 
-      Dann <em style="color:var(--rot)">schrieb</em> er einen Artikel über den Bürgermeister. 
-      Um 12 Uhr <em style="color:var(--rot)">fuhr</em> er zum Rathaus und <em style="color:var(--rot)">sprach</em> mit dem Pressesprecher. 
-      Am Abend <em style="color:var(--rot)">sah</em> er die Nachrichten und <em style="color:var(--rot)">fand</em> einen Fehler.
-    </div>
-    <div class="writing-area">
-      <textarea id="writingInput" placeholder="Der Reporter …" oninput="trackVerbs()"></textarea>
-    </div>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">歌德："Es ist nicht genug zu wissen, man muss auch anwenden."<br><span class="zh">用急救卡里的动词，写一段"记者的某一天"。</span></p>
+    <div class="model-toggle"><button class="nav-btn outline" onclick="document.getElementById('modelText').classList.toggle('show')">📋 范文参考</button></div>
+    <div class="model-text" id="modelText"><strong>📰 Beispiel:</strong><br>Der Reporter <em style="color:var(--rot)">kam</em> um 7 Uhr ins Büro. Er <em style="color:var(--rot)">aß</em> ein Sandwich und <em style="color:var(--rot)">trank</em> einen Kaffee. Dann <em style="color:var(--rot)">schrieb</em> er einen Artikel. Um 12 Uhr <em style="color:var(--rot)">fuhr</em> er zum Rathaus und <em style="color:var(--rot)">sprach</em> mit dem Pressesprecher. Am Abend <em style="color:var(--rot)">sah</em> er die Nachrichten und <em style="color:var(--rot)">fand</em> einen Fehler.</div>
+    <div class="writing-area"><textarea id="writingInput" placeholder="Der Reporter …" oninput="trackVerbs()"></textarea></div>
     <div class="verb-tracker" id="verbTracker"></div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(6)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(8)">Exit-Ticket →</button>
-    </div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(8)">← Zurück</button><button class="nav-btn" onclick="goTo(10)">Exit-Ticket →</button></div>
   </div>
 </section>
 
-<!-- ========== S7: EXIT TICKET ========== -->
-<section class="section" id="s7" data-index="8">
+<!-- S11: EXIT TICKET -->
+<section class="section" id="s11" data-index="10">
   <div class="section-inner">
-    <div class="section-tag gold">08 · Reflexion</div>
+    <div class="section-tag gold">10 · Reflexion</div>
     <h2>🎫 Exit-Ticket</h2>
-    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">康德："Gedanken ohne Inhalt sind leer."<br><span class="zh">——没有内容的思维是空洞的。下课前，用两句话整理今天的收获和困惑。</span></p>
+    <p style="margin-top:6px;color:var(--grau-light);font-size:.9rem">康德："Gedanken ohne Inhalt sind leer."<br><span class="zh">下课前，用两句话整理今天的收获和困惑。</span></p>
     <div class="ticket-grid">
-      <div class="ticket-card">
-        <h4>✅ Heute habe ich gelernt…</h4>
-        <p style="font-size:.78rem;color:var(--grau-light);margin-bottom:8px"><span class="zh">今天我学到了……</span></p>
-        <textarea placeholder="Ich habe gelernt, dass das Präteritum …"></textarea>
-      </div>
-      <div class="ticket-card">
-        <h4>❓ Ich bin noch nicht sicher bei…</h4>
-        <p style="font-size:.78rem;color:var(--grau-light);margin-bottom:8px"><span class="zh">我还不太确定……</span></p>
-        <textarea placeholder="Ich bin mir nicht sicher bei …"></textarea>
-      </div>
+      <div class="ticket-card"><h4>✅ Heute habe ich gelernt…</h4><p style="font-size:.78rem;color:var(--grau-light)">今天我学到了……</p><textarea placeholder="Ich habe gelernt, dass …"></textarea></div>
+      <div class="ticket-card"><h4>❓ Ich bin noch nicht sicher bei…</h4><p style="font-size:.78rem;color:var(--grau-light)">我还不太确定……</p><textarea placeholder="Ich bin mir nicht sicher bei …"></textarea></div>
     </div>
-    <div style="text-align:center;margin-top:24px">
-      <button class="nav-btn" onclick="submitTicket()" style="padding:13px 40px;font-size:.95rem">📮 Abgeben</button>
-    </div>
-    <div class="nav-row">
-      <button class="nav-btn prev" onclick="goTo(7)">← Zurück</button>
-      <button class="nav-btn" onclick="goTo(9)">Zum Schluss →</button>
-    </div>
+    <div style="text-align:center;margin-top:24px"><button class="nav-btn" onclick="submitTicket()" style="padding:13px 40px;font-size:.95rem">📮 Abgeben</button></div>
+    <div class="nav-row"><button class="nav-btn prev" onclick="goTo(9)">← Zurück</button><button class="nav-btn" onclick="goTo(11)">Zum Schluss →</button></div>
   </div>
 </section>
 
-<!-- ========== S8: FINALE ========== -->
-<section class="section" id="s8" data-index="9">
+<!-- S12: FINALE -->
+<section class="section" id="s12" data-index="11">
   <div class="section-inner">
     <div class="masthead" style="color:var(--gold);border-color:rgba(244,162,97,.25)">Die Zeitung — Schlussredaktion</div>
-    <div class="final-quote">
-      <span class="cn">二分词忘了？<br>那就用过去时！</span>
-    </div>
+    <div class="final-quote"><span class="cn">二分词忘了？<br>那就用过去时！</span></div>
     <p class="final-sub">Präteritum — die Zeit, in der Geschichten atmen</p>
-    <p style="color:rgba(255,255,255,.3);font-size:.85rem;margin-bottom:28px">🩹 <span class="zh">记住这 30 张急救卡，你就能讲任何故事</span></p>
+    <p style="color:rgba(255,255,255,.3);font-size:.85rem;margin-bottom:28px">🩹 <span class="zh">30 张急救卡 + 8 组元音分组，你就能讲任何故事</span></p>
     <div class="mini-cards" id="miniCards"></div>
     <p style="margin-top:32px;font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--gold)">Gut gemacht, Reporter!</p>
     <div class="flag-strip"><span></span><span></span><span></span></div>
@@ -621,228 +471,94 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;letter-spa
 </section>
 
 <script>
-// ---- VERB DATA (30 verbs, 三时态高频词表) ----
-const verbs=[
-  ['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],
-  ['machen','machte'],['sagen','sagte'],['essen','aß'],['sehen','sah'],
-  ['geben','gab'],['finden','fand'],['fahren','fuhr'],['schreiben','schrieb'],
-  ['bleiben','blieb'],['stehen','stand'],['helfen','half'],['sprechen','sprach'],
-  ['nehmen','nahm'],['schlafen','schlief'],['laufen','lief'],['tragen','trug'],
-  ['denken','dachte'],['bringen','brachte'],['wissen','wusste'],['kennen','kannte'],
-  ['werden','wurde'],['lassen','ließ'],['fallen','fiel'],['beginnen','begann'],
-  ['verstehen','verstand'],['vergessen','vergaß']
-];
+// ---- VERB DATA (三周词表) ----
+const W1=[['sein','ist','war','ist gewesen'],['haben','hat','hatte','hat gehabt'],['gehen','geht','ging','ist gegangen'],['kommen','kommt','kam','ist gekommen'],['machen','macht','machte','hat gemacht'],['sagen','sagt','sagte','hat gesagt'],['essen','isst','aß','hat gegessen'],['sehen','sieht','sah','hat gesehen'],['geben','gibt','gab','hat gegeben'],['finden','findet','fand','hat gefunden']];
+const W2=[['fahren','fährt','fuhr','ist gefahren'],['schreiben','schreibt','schrieb','hat geschrieben'],['bleiben','bleibt','blieb','ist geblieben'],['stehen','steht','stand','hat gestanden'],['helfen','hilft','half','hat geholfen'],['sprechen','spricht','sprach','hat gesprochen'],['nehmen','nimmt','nahm','hat genommen'],['schlafen','schläft','schlief','hat geschlafen'],['laufen','läuft','lief','ist gelaufen'],['tragen','trägt','trug','hat getragen']];
+const W3=[['denken','denkt','dachte','hat gedacht'],['bringen','bringt','brachte','hat gebracht'],['wissen','weiß','wusste','hat gewusst'],['kennen','kennt','kannte','hat gekannt'],['werden','wird','wurde','ist geworden'],['lassen','lässt','ließ','hat gelassen'],['fallen','fällt','fiel','ist gefallen'],['beginnen','beginnt','begann','hat begonnen'],['verstehen','versteht','verstand','hat verstanden'],['vergessen','vergisst','vergaß','hat vergessen']];
+const ALL=[...W1,...W2,...W3];
 
-// Vowel groups for Nachbarn section
-const groups=[
-  {id:'ei-ie',title:'ei → ie',color:'#e76f51',verbs:[
-    ['schreiben','schrieb'],['bleiben','blieb'],['verstehen','verstand']
-  ]},
-  {id:'e-a-o',title:'e → a → o',color:'#2a9d8f',verbs:[
-    ['nehmen','nahm'],['sprechen','sprach'],['helfen','half'],['beginnen','begann']
-  ]},
-  {id:'e-a-e',title:'e → a → e',color:'#264653',verbs:[
-    ['essen','aß'],['geben','gab'],['sehen','sah'],['vergessen','vergaß']
-  ]},
-  {id:'i-a-u',title:'i → a → u',color:'#e9c46a',verbs:[
-    ['finden','fand']
-  ]},
-  {id:'a-u',title:'a → u',color:'#f4a261',verbs:[
-    ['fahren','fuhr'],['tragen','trug']
-  ]},
-  {id:'a-ie',title:'a → ie',color:'#9b5de5',verbs:[
-    ['schlafen','schlief'],['fallen','fiel'],['lassen','ließ'],['laufen','lief']
-  ]},
-  {id:'e-a-mix',title:'e → a 混合',color:'#00b4d8',verbs:[
-    ['denken','dachte'],['bringen','brachte'],['kennen','kannte'],['wissen','wusste']
-  ]},
-  {id:'special',title:'特殊变化',color:'#1d1d1d',verbs:[
-    ['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],
-    ['stehen','stand'],['werden','wurde'],['machen','machte'],['sagen','sagte']
-  ]}
-];
-
-const N=10;let cur=0;
+const N=12;let cur=0;
 
 // ---- PROGRESS DOTS ----
-(function(){
-  const d=document.getElementById('progress-dots');
-  for(let i=0;i<N;i++){const s=document.createElement('span');s.className='dot';s.title=`Abschnitt ${i+1}`;s.onclick=()=>goTo(i);d.appendChild(s)}
-})();
+(function(){const d=document.getElementById('progress-dots');for(let i=0;i<N;i++){const s=document.createElement('span');s.className='dot';s.title='Seite '+(i+1);s.onclick=()=>goTo(i);d.appendChild(s)}})();
 function updProgress(){
-  const pct=((cur+1)/N)*100;
-  document.getElementById('progress-bar').style.width=pct+'%';
-  document.querySelectorAll('#progress-dots .dot').forEach((d,i)=>{
-    d.classList.toggle('active',i===cur);d.classList.toggle('done',i<cur);
-  });
+  document.getElementById('progress-bar').style.width=((cur+1)/N*100)+'%';
+  document.querySelectorAll('#progress-dots .dot').forEach((d,i)=>{d.classList.toggle('active',i===cur);d.classList.toggle('done',i<cur)});
 }
 
 // ---- NAVIGATION ----
 function goTo(i){
   if(i<0||i>=N)return;
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  const t=document.querySelector(`[data-index="${i}"]`);t.classList.add('active');
-  t.scrollIntoView({behavior:'smooth',block:'start'});cur=i;updProgress();
-  if(i===4)buildCards();if(i===5)initQuiz();if(i===6)buildGroups();if(i===9)buildMini();
+  document.querySelector('[data-index="'+i+'"]').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});cur=i;updProgress();
+  if(i===4)buildCards(W1,'cardsW1','flipW1');
+  if(i===5)buildCards(W2,'cardsW2','flipW2');
+  if(i===6)buildCards(W3,'cardsW3','flipW3');
+  if(i===7)initQuiz();
+  if(i===8)buildGroups();
+  if(i===11)buildMini();
 }
-
-// ---- S3: FIND TE ----
-let found=0;
-function findTe(el){
-  const row=el.closest('.verb-row');if(row.dataset.found==='true')return;
-  el.querySelector('.te-hl').classList.add('found');row.dataset.found='true';found++;
-  if(found===5)document.getElementById('stepsReveal').classList.add('show');
-}
-
-// ---- S4: TRAP ----
-function revealTrap(){
-  const c=document.getElementById('trapCard');c.classList.add('revealed');
-  setTimeout(()=>document.getElementById('trapRule').classList.add('show'),500);
-}
-
-// ---- S5: CARDS ----
-function buildCards(){
-  const g=document.getElementById('cardsGrid');if(g.children.length)return;
-  verbs.forEach(([inf,past])=>{
+function buildCards(data,gridId,counterId){
+  const g=document.getElementById(gridId);if(g.children.length)return;
+  data.forEach(([inf,pres,past,perf])=>{
     const c=document.createElement('div');c.className='flip-card';
-    c.onclick=function(){this.classList.toggle('flipped');
-      document.getElementById('flipCount').textContent=document.querySelectorAll('.flip-card.flipped').length;};
-    c.innerHTML=`<div class="flip-card-inner"><div class="flip-card-front"><div class="card-icon">🩹</div><div class="card-inf">${inf}</div></div><div class="flip-card-back">${past}<div class="card-hint">Präteritum</div></div></div>`;
+    c.onclick=function(){this.classList.toggle('flipped');document.getElementById(counterId).textContent=document.querySelectorAll('#'+gridId+' .flip-card.flipped').length;};
+    c.innerHTML='<div class="flip-card-inner"><div class="flip-card-front"><div class="card-icon">🩹</div><div class="card-inf">'+inf+'</div></div><div class="flip-card-back"><div class="fb-row"><span class="fb-label">jetzt</span><span class="fb-val">'+pres+'</span></div><div class="fb-row"><span class="fb-label">früher</span><span class="fb-past">'+past+'</span></div><div class="fb-row"><span class="fb-label">perfekt</span><span class="fb-val">'+perf+'</span></div></div></div>';
     g.appendChild(c);
   });
 }
 
-// ---- S5.5: BLITZ QUIZ ----
-let quizVerbs=[],quizIdx=0,quizScore=0,quizStreak=0,quizMaxStreak=0;
-function initQuiz(){
-  if(document.getElementById('quizVerb').textContent!=='—')return;
-  quizVerbs=[...verbs].sort(()=>Math.random()-.5);
-  quizIdx=0;quizScore=0;quizStreak=0;quizMaxStreak=0;
-  document.getElementById('quizScore').textContent='0';
-  document.getElementById('quizStreak').textContent='0';
-  document.getElementById('quizRemain').textContent=quizVerbs.length;
-  document.getElementById('quizProgressFill').style.width='0%';
-  document.getElementById('quizFeedback').textContent='';
-  document.getElementById('quizFeedback').className='quiz-feedback';
-  document.getElementById('quizInput').className='quiz-input';
-  document.getElementById('quizInput').value='';
-  document.getElementById('quizActive').style.display='block';
-  document.getElementById('quizDone').classList.remove('show');
-  showQuizVerb();
-  document.getElementById('quizInput').focus();
-}
+// ---- S3: FIND TE ----
+let found=0;
+function findTe(el){const r=el.closest('.verb-row');if(r.dataset.found=='true')return;el.querySelector('.te-hl').classList.add('found');r.dataset.found='true';found++;if(found===5)document.getElementById('stepsReveal').classList.add('show');}
 
-function showQuizVerb(){
-  if(quizIdx>=quizVerbs.length){showQuizDone();return;}
-  const [inf,past]=quizVerbs[quizIdx];
-  document.getElementById('quizVerb').textContent=inf;
-  document.getElementById('quizInput').value='';
-  document.getElementById('quizInput').className='quiz-input';
-  document.getElementById('quizFeedback').textContent='';
-  document.getElementById('quizFeedback').className='quiz-feedback';
-  document.getElementById('quizRemain').textContent=quizVerbs.length-quizIdx;
-  document.getElementById('quizProgressFill').style.width=((quizIdx/quizVerbs.length)*100)+'%';
-  setTimeout(()=>document.getElementById('quizInput').focus(),100);
-}
+// ---- S4: TRAP ----
+function revealTrap(){document.getElementById('trapCard').classList.add('revealed');setTimeout(()=>document.getElementById('trapRule').classList.add('show'),500);}
 
-function checkQuiz(){
-  if(quizIdx>=quizVerbs.length)return;
-  const [inf,past]=quizVerbs[quizIdx];
-  const ans=document.getElementById('quizInput').value.trim().toLowerCase();
-  const inp=document.getElementById('quizInput');
-  const fb=document.getElementById('quizFeedback');
-  if(!ans){inp.className='quiz-input wrong';fb.textContent='Bitte antworten!';fb.className='quiz-feedback wrong';setTimeout(()=>document.getElementById('quizInput').focus(),500);return;}
-  if(ans===past.toLowerCase()){
-    quizScore++;quizStreak++;
-    if(quizStreak>quizMaxStreak)quizMaxStreak=quizStreak;
-    document.getElementById('quizScore').textContent=quizScore;
-    document.getElementById('quizStreak').textContent=quizStreak;
-    inp.className='quiz-input correct';
-    fb.textContent='✅ Richtig!';
-    fb.className='quiz-feedback correct';
-  }else{
-    quizStreak=0;
-    document.getElementById('quizStreak').textContent='0';
-    inp.className='quiz-input wrong';
-    fb.innerHTML='❌ <strong>'+past+'</strong>';
-    fb.className='quiz-feedback wrong';
-  }
-  quizIdx++;
-  setTimeout(showQuizVerb,600);
-}
+// ---- S8: BLITZ QUIZ ----
+let qV=[],qI=0,qS=0,qSt=0,qMx=0;
+function initQuiz(){if(document.getElementById('quizVerb').textContent!=='—')return;qV=[...ALL.map(v=>[v[0],v[2]])].sort(()=>Math.random()-.5);qI=0;qS=0;qSt=0;qMx=0;document.getElementById('quizScore').textContent='0';document.getElementById('quizStreak').textContent='0';document.getElementById('quizRemain').textContent=qV.length;document.getElementById('quizProgressFill').style.width='0%';document.getElementById('quizFeedback').textContent='';document.getElementById('quizFeedback').className='quiz-feedback';document.getElementById('quizInput').className='quiz-input';document.getElementById('quizInput').value='';document.getElementById('quizActive').style.display='block';document.getElementById('quizDone').classList.remove('show');showQ();setTimeout(()=>document.getElementById('quizInput').focus(),100);}
+function showQ(){if(qI>=qV.length){showQdone();return;}document.getElementById('quizVerb').textContent=qV[qI][0];document.getElementById('quizInput').value='';document.getElementById('quizInput').className='quiz-input';document.getElementById('quizFeedback').textContent='';document.getElementById('quizFeedback').className='quiz-feedback';document.getElementById('quizRemain').textContent=qV.length-qI;document.getElementById('quizProgressFill').style.width=(qI/qV.length*100)+'%';setTimeout(()=>document.getElementById('quizInput').focus(),100);}
+function checkQuiz(){if(qI>=qV.length)return;const ans=document.getElementById('quizInput').value.trim().toLowerCase();const inp=document.getElementById('quizInput'),fb=document.getElementById('quizFeedback');if(!ans){inp.className='quiz-input wrong';fb.textContent='Bitte antworten!';fb.className='quiz-feedback wrong';setTimeout(()=>document.getElementById('quizInput').focus(),500);return;}if(ans===qV[qI][1].toLowerCase()){qS++;qSt++;if(qSt>qMx)qMx=qSt;document.getElementById('quizScore').textContent=qS;document.getElementById('quizStreak').textContent=qSt;inp.className='quiz-input correct';fb.textContent='✅ Richtig!';fb.className='quiz-feedback correct';}else{qSt=0;document.getElementById('quizStreak').textContent='0';inp.className='quiz-input wrong';fb.innerHTML='❌ <strong>'+qV[qI][1]+'</strong>';fb.className='quiz-feedback wrong';}qI++;setTimeout(showQ,600);}
+function skipQuiz(){if(qI>=qV.length)return;qSt=0;document.getElementById('quizStreak').textContent='0';document.getElementById('quizFeedback').innerHTML='<span style="color:var(--grau-light)">→ '+qV[qI][1]+'</span>';document.getElementById('quizFeedback').className='quiz-feedback';qI++;setTimeout(showQ,400);}
+function showQdone(){document.getElementById('quizActive').style.display='none';document.getElementById('quizDone').classList.add('show');document.getElementById('quizFinalScore').textContent=qS;document.getElementById('quizMaxStreak').textContent=qMx;document.getElementById('quizProgressFill').style.width='100%';}
+function restartQuiz(){document.getElementById('quizActive').style.display='block';document.getElementById('quizDone').classList.remove('show');initQuiz();}
+document.addEventListener('keydown',function(e){if(cur===7&&e.key==='Enter'&&document.activeElement===document.getElementById('quizInput')){e.preventDefault();checkQuiz();}});
 
-function skipQuiz(){
-  if(quizIdx>=quizVerbs.length)return;
-  const [,past]=quizVerbs[quizIdx];
-  quizStreak=0;
-  document.getElementById('quizStreak').textContent='0';
-  const fb=document.getElementById('quizFeedback');
-  fb.innerHTML='<span style="color:var(--grau-light)">→ '+past+'</span>';
-  fb.className='quiz-feedback';
-  quizIdx++;
-  setTimeout(showQuizVerb,400);
-}
-
-function showQuizDone(){
-  document.getElementById('quizActive').style.display='none';
-  document.getElementById('quizDone').classList.add('show');
-  document.getElementById('quizFinalScore').textContent=quizScore;
-  document.getElementById('quizMaxStreak').textContent=quizMaxStreak;
-  document.getElementById('quizProgressFill').style.width='100%';
-}
-
-function restartQuiz(){
-  document.getElementById('quizActive').style.display='block';
-  document.getElementById('quizDone').classList.remove('show');
-  initQuiz();
-}
-
-// Quiz Enter key
-document.addEventListener('keydown',function(e){
-  if(cur===5&&e.key==='Enter'&&document.activeElement===document.getElementById('quizInput')){
-    e.preventDefault();checkQuiz();
-  }
-});
-
-// ---- S5.6: NACHBARN ----
+// ---- S9: NACHBARN ----
 function buildGroups(){
   const g=document.getElementById('groupGrid');if(g.children.length)return;
+  const groups=[
+    {t:'ei → ie',c:'#e76f51',v:[['schreiben','schrieb'],['bleiben','blieb'],['verstehen','verstand']]},
+    {t:'e → a → o',c:'#2a9d8f',v:[['nehmen','nahm'],['sprechen','sprach'],['helfen','half'],['beginnen','begann']]},
+    {t:'e → a → e',c:'#264653',v:[['essen','aß'],['geben','gab'],['sehen','sah'],['vergessen','vergaß']]},
+    {t:'i → a → u',c:'#e9c46a',v:[['finden','fand']]},
+    {t:'a → u',c:'#f4a261',v:[['fahren','fuhr'],['tragen','trug']]},
+    {t:'a → ie',c:'#9b5de5',v:[['schlafen','schlief'],['fallen','fiel'],['lassen','ließ'],['laufen','lief']]},
+    {t:'e → a 混合',c:'#00b4d8',v:[['denken','dachte'],['bringen','brachte'],['kennen','kannte'],['wissen','wusste']]},
+    {t:'特殊变化',c:'#1d1d1d',v:[['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],['stehen','stand'],['werden','wurde'],['machen','machte'],['sagen','sagte']]}
+  ];
   groups.forEach(grp=>{
     const c=document.createElement('div');c.className='group-card';
-    const verbList=grp.verbs.map(([inf,past])=>`<div class="group-verb-row"><span class="gv-inf">${inf}</span><span class="gv-arrow">→</span><span class="gv-past">${past}</span></div>`).join('');
-    c.innerHTML=`<div class="group-card-header"><div class="group-card-color" style="background:${grp.color}"></div><div class="group-card-title">${grp.title}</div><div class="group-card-count">${grp.verbs.length} Verben</div></div><div class="group-card-body">${verbList}</div>`;
+    c.innerHTML='<div class="group-card-header"><div class="group-card-color" style="background:'+grp.c+'"></div><div class="group-card-title">'+grp.t+'</div><div class="group-card-count">'+grp.v.length+' Verben</div></div><div class="group-card-body">'+grp.v.map(([inf,past])=>'<div class="group-verb-row"><span class="gv-inf">'+inf+'</span><span class="gv-arrow">→</span><span class="gv-past">'+past+'</span></div>').join('')+'</div>';
     c.onclick=function(){this.classList.toggle('open')};
     g.appendChild(c);
   });
 }
 
-// ---- S6: VERB TRACKING ----
-function trackVerbs(){
-  const text=document.getElementById('writingInput').value.toLowerCase();
-  const t=document.getElementById('verbTracker');t.innerHTML='';
-  verbs.forEach(([,past])=>{
-    const tag=document.createElement('span');tag.className='vtag';tag.textContent=past;
-    if(text.includes(past.toLowerCase()))tag.classList.add('used');t.appendChild(tag);
-  });
-}
+// ---- S10: VERB TRACKING ----
+function trackVerbs(){const tx=document.getElementById('writingInput').value.toLowerCase(),t=document.getElementById('verbTracker');t.innerHTML='';ALL.forEach(([, ,past])=>{const tag=document.createElement('span');tag.className='vtag';tag.textContent=past;if(tx.includes(past.toLowerCase()))tag.classList.add('used');t.appendChild(tag);});}
 
-// ---- S7: TICKET ----
-function submitTicket(){const x=document.getElementById('toast');x.textContent='✅ Ticket abgegeben! Der Lehrer liest es. 📮';x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2500);}
+// ---- S11: TICKET ----
+function submitTicket(){const x=document.getElementById('toast');x.textContent='✅ Ticket abgegeben! 📮';x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2500);}
 
-// ---- S8: MINI CARDS ----
-function buildMini(){
-  const c=document.getElementById('miniCards');if(c.children.length)return;
-  verbs.forEach(([inf,past])=>{const s=document.createElement('span');s.className='mini-card';s.textContent=`${inf} → ${past}`;c.appendChild(s);});
-}
+// ---- S12: MINI CARDS ----
+function buildMini(){const c=document.getElementById('miniCards');if(c.children.length)return;ALL.forEach(([inf,,past])=>{const s=document.createElement('span');s.className='mini-card';s.textContent=inf+' → '+past;c.appendChild(s);});}
 
-// ---- KEYBOARD ----
-document.addEventListener('keydown',e=>{
-  if(cur===5)return;
-  if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(Math.min(cur+1,N-1));
-  if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(Math.max(cur-1,0));
-});
+// ---- KEYBOARD (skip during quiz) ----
+document.addEventListener('keydown',e=>{if(cur===7)return;if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(Math.min(cur+1,N-1));if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(Math.max(cur-1,0));});
 
-// ---- INIT ----
 updProgress();
 </script>
 </body>
