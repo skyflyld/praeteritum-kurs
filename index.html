@@ -261,14 +261,14 @@ function showQd(){document.getElementById('quizActive').style.display='none';doc
 function restartQuiz(){document.getElementById('quizActive').style.display='block';document.getElementById('quizDone').classList.remove('show');initQuiz()}
 document.addEventListener('keydown',function(e){if(cur===9&&e.key==='Enter'&&document.activeElement===document.getElementById('quizInput')){e.preventDefault();checkQuiz()}})
 function buildG(){const g=document.getElementById('groupGrid');if(g.children.length)return;[
-  {t:'ei → ie',c:'#e76f51',v:[['schreiben','schrieb'],['bleiben','blieb'],['verstehen','verstand'],['vergleichen','verglich'],['entscheiden','entschied']]},
-  {t:'e → a → o',c:'#2a9d8f',v:[['nehmen','nahm'],['sprechen','sprach'],['helfen','half'],['beginnen','begann'],['treffen','traf'],['empfehlen','empfahl'],['werfen','warf'],['schwimmen','schwamm'],['gewinnen','gewann'],['klingen','klang']]},
+  {t:'ei → ie',c:'#e76f51',v:[['schreiben','schrieb'],['bleiben','blieb'],['entscheiden','entschied']]},
+  {t:'e → a → o',c:'#2a9d8f',v:[['nehmen','nahm'],['sprechen','sprach'],['helfen','half'],['beginnen','begann'],['treffen','traf'],['empfehlen','empfahl'],['werfen','warf'],['schwimmen','schwamm'],['gewinnen','gewann']]},
   {t:'e → a → e',c:'#264653',v:[['essen','aß'],['geben','gab'],['sehen','sah'],['vergessen','vergaß'],['lesen','las'],['messen','maß']]},
-  {t:'ei → i → i',c:'#e9c46a',v:[['beißen','biss'],['schneiden','schnitt']]},
+  {t:'ei → i → i',c:'#e9c46a',v:[['beißen','biss'],['schneiden','schnitt'],['vergleichen','verglich']]},
   {t:'i → a → u',c:'#e9c46a',v:[['finden','fand'],['singen','sang'],['trinken','trank'],['klingen','klang']]},
   {t:'a → u',c:'#f4a261',v:[['fahren','fuhr'],['tragen','trug'],['laden','lud']]},
   {t:'a → ie',c:'#9b5de5',v:[['schlafen','schlief'],['fallen','fiel'],['lassen','ließ'],['laufen','lief']]},
-  {t:'e → a 混合',c:'#00b4d8',v:[['denken','dachte'],['bringen','brachte'],['kennen','kannte'],['wissen','wusste'],['nennen','nannte']]},
+  {t:'e → a 混合',c:'#00b4d8',v:[['denken','dachte'],['bringen','brachte'],['kennen','kannte'],['wissen','wusste'],['verstehen','verstand']]},
   {t:'特殊变化',c:'#1d1d1d',v:[['sein','war'],['haben','hatte'],['gehen','ging'],['kommen','kam'],['stehen','stand'],['werden','wurde'],['machen','machte'],['sagen','sagte'],['rufen','rief'],['heißen','hieß']]}
 ].forEach(grp=>{const c=document.createElement('div');c.className='group-card';c.innerHTML='<div class="group-card-header"><div class="group-card-color" style="background:'+grp.c+'"></div><div class="group-card-title">'+grp.t+'</div><div class="group-card-count">'+grp.v.length+' Verben</div></div><div class="group-card-body">'+grp.v.map(([i,p])=>'<div class="group-verb-row"><span class="gv-inf">'+i+'</span><span class="gv-arrow">→</span><span class="gv-past">'+p+'</span></div>').join('')+'</div>';c.onclick=function(){this.classList.toggle('open')};g.appendChild(c)})}
 function trackVerbs(){const t=document.getElementById('writingInput').value.toLowerCase(),c=document.getElementById('verbTracker');c.innerHTML='';ALL.forEach(([, ,p])=>{const s=document.createElement('span');s.className='vtag';s.textContent=p;if(t.includes(p.toLowerCase()))s.classList.add('used');c.appendChild(s)})}
